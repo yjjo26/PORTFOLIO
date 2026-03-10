@@ -194,11 +194,22 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                                 transition={{ delay: idx * 0.1, duration: 0.5 }}
                                                 className="w-full rounded-2xl overflow-hidden border border-white/10 bg-black/20"
                                             >
-                                                <img
-                                                    src={imgSrc}
-                                                    alt={`${project.title} screenshot ${idx + 1}`}
-                                                    className="w-full h-auto object-contain"
-                                                />
+                                                {imgSrc.endsWith('.mp4') ? (
+                                                    <video
+                                                        src={imgSrc}
+                                                        autoPlay
+                                                        loop
+                                                        muted
+                                                        playsInline
+                                                        className="w-full h-auto object-contain"
+                                                    />
+                                                ) : (
+                                                    <img
+                                                        src={imgSrc}
+                                                        alt={`${project.title} screenshot ${idx + 1}`}
+                                                        className="w-full h-auto object-contain"
+                                                    />
+                                                )}
                                             </motion.div>
                                         ))}
                                     </div>
