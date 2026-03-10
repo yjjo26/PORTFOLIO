@@ -1,0 +1,13 @@
+Stitching directory: 01_캐릭터선정 with 4 images...
+  Done: bmw_stitched_01_01캐릭터선정.webp
+Stitching directory: 02_로라 with 9 images...
+D:\02_Antiqravity\PORTFOLIO\ai-portfolio\node_modules\sharp\lib\output.js:90
+    const stack = Error();
+                  ^
+
+Error: Processed image is too large for the WebP format
+    at Sharp.toFile (D:\02_Antiqravity\PORTFOLIO\ai-portfolio\node_modules\sharp\lib\output.js:90:19)
+    at processBMW (D:\02_Antiqravity\PORTFOLIO\ai-portfolio\scripts\process-extra-assets.js:61:14)
+    at async main (D:\02_Antiqravity\PORTFOLIO\ai-portfolio\scripts\process-extra-assets.js:102:5)
+
+Node.js v24.13.0

@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Clean SF Theme */
+  --background: #000000;
+  --foreground: #FFFFFF;
+
+  /* Clean Accents */
+  --sf-blue: #2997FF;
+  --sf-blue-dim: rgba(41, 151, 255, 0.1);
+  --sf-glass-border: rgba(255, 255, 255, 0.15);
+  --sf-glass-bg: rgba(20, 20, 20, 0.6);
+
+  /* Shadows */
+  --sf-glow: 0 0 20px rgba(41, 151, 255, 0.3);
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-sf-blue: var(--sf-blue);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .sf-glass {
+    background: var(--sf-glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--sf-glass-border);
+  }
+
+  .sf-text-glow {
+    text-shadow: 0 0 15px rgba(41, 151, 255, 0.5);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-rajdhani), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  /* Apple-like font rendering */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apple-like Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar - Minimalist */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--stark-cyan);
 }
