@@ -21,13 +21,13 @@ export function SlackBotSection() {
     };
 
     return (
-        <section className="relative w-full py-32 px-4 flex justify-center">
+        <section className="relative w-full py-16 sm:py-32 px-4 flex justify-center">
             <div className="max-w-2xl w-full">
-                <div className="text-center mb-12">
+                <div className="text-center mb-8 sm:mb-12">
                     <span className="inline-block py-1 px-3 rounded-full bg-sf-blue/10 text-sf-blue text-xs font-medium mb-4">
                         AI INTEGRATION
                     </span>
-                    <h2 className="text-4xl font-light text-white mb-2">
+                    <h2 className="text-2xl sm:text-4xl font-light text-white mb-2">
                         System Interface
                     </h2>
                     <p className="text-gray-500">Target Protocol Communication</p>
@@ -43,7 +43,7 @@ export function SlackBotSection() {
                     </div>
 
                     {/* Chat Area */}
-                    <div className="h-96 overflow-y-auto p-8 space-y-6 bg-black/40">
+                    <div className="h-64 sm:h-96 overflow-y-auto p-4 sm:p-8 space-y-4 sm:space-y-6 bg-black/40">
                         {messages.map((m, i) => (
                             <motion.div
                                 key={i}

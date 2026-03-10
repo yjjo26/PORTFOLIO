@@ -77,9 +77,9 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                     <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
                     {/* Project Title Overlay */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6">
                         <motion.div
-                            className="text-white/90 text-2xl font-light tracking-tight text-center"
+                            className="text-white/90 text-xl sm:text-2xl font-light tracking-tight text-center"
                             whileHover={{ scale: 1.02 }}
                         >
                             {project.title}
@@ -106,7 +106,7 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                 </div>
 
                 {/* Info Area */}
-                <div className="flex flex-col flex-grow p-6">
+                <div className="flex flex-col flex-grow p-4 sm:p-6">
                     {/* Role */}
                     <div className="text-sm text-gray-400 font-mono mb-4 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-sf-blue transition-colors" />

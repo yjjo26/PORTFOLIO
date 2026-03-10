@@ -285,7 +285,7 @@ export function PortfolioShowcase() {
     const selectedProject = selectedIndex !== null ? filteredProjects[selectedIndex] : null;
 
     return (
-        <section className="relative w-full py-32 px-4 md:px-8 z-20">
+        <section className="relative w-full py-16 sm:py-32 px-4 md:px-8 z-20">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <motion.div
@@ -296,7 +296,7 @@ export function PortfolioShowcase() {
                     className="mb-16 flex flex-col items-center justify-center text-center space-y-4"
                 >
                     <div className="w-10 h-1 bg-sf-blue rounded-full" />
-                    <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white tracking-tight">
                         Project Archive
                     </h2>
                     <p className="text-gray-500 font-mono text-sm tracking-wide">

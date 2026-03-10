@@ -47,11 +47,12 @@ export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void
             onMouseMove={handleMouseMove}
         >
             {/* Minimal Grid Background */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 pointer-events-none mix-blend-screen" />
 
             {/* Clean Top Bar */}
             <motion.div
-                className="absolute top-0 left-0 right-0 h-20 flex items-center justify-between px-12 z-20 pointer-events-none"
+                className="absolute top-0 left-0 right-0 h-20 flex items-center justify-between px-4 sm:px-12 z-20 pointer-events-none"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
@@ -79,7 +80,7 @@ export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 1, ease: "circOut" }}
-                    className="relative w-[500px] h-[300px] sf-glass rounded-2xl flex flex-col items-center justify-center overflow-hidden"
+                    className="relative w-[90vw] max-w-[500px] h-[250px] sm:h-[300px] sf-glass rounded-2xl flex flex-col items-center justify-center overflow-hidden"
                     style={{ transform: "translateZ(0px)" }}
                 >
                     {/* Status Light */}
@@ -116,20 +117,20 @@ export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void
 
                 {/* 2. Floating Orbital Elements (Clean) */}
                 {status === "DASHBOARD" && [
-                    { icon: Code, x: -320, y: 0, delay: 0.1 },
-                    { icon: Database, x: 320, y: 0, delay: 0.2 },
-                    { icon: Search, x: 0, y: -200, delay: 0.3 },
-                    { icon: Globe, x: 0, y: 200, delay: 0.4 },
+                    { icon: Code, x: -180, y: 0, smX: -320, smY: 0, delay: 0.1 },
+                    { icon: Database, x: 180, y: 0, smX: 320, smY: 0, delay: 0.2 },
+                    { icon: Search, x: 0, y: -140, smX: 0, smY: -200, delay: 0.3 },
+                    { icon: Globe, x: 0, y: 140, smX: 0, smY: 200, delay: 0.4 },
                 ].map((item, i) => (
                     <motion.div
                         key={i}
                         initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1, x: item.x, y: item.y }}
+                        animate={{ opacity: 1, scale: 1, x: typeof window !== 'undefined' && window.innerWidth >= 640 ? item.smX : item.x, y: typeof window !== 'undefined' && window.innerWidth >= 640 ? item.smY : item.y }}
                         transition={{ delay: item.delay, type: "spring", stiffness: 100 }}
-                        className="absolute top-1/2 left-1/2 -ml-8 -mt-8 w-16 h-16 sf-glass rounded-xl flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors"
+                        className="absolute top-1/2 left-1/2 -ml-5 -mt-5 w-10 h-10 sm:-ml-8 sm:-mt-8 sm:w-16 sm:h-16 sf-glass rounded-xl flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors"
                         style={{ transform: "translateZ(50px)" }}
                     >
-                        <item.icon className="text-white/80" size={20} />
+                        <item.icon className="text-white/80" size={16} />
                     </motion.div>
                 ))}
 
