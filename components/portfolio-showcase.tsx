@@ -85,8 +85,8 @@ const PROJECTS: PortfolioProject[] = [
         description: "던전앤파이터 게임 내 UI 디자인 설계 및 전반적인 고도화 작업을 진행했습니다. 세계관 특유의 톤앤매너를 반영하여 작업했습니다.",
         participation: 100,
         gradient: "bg-gradient-to-br from-amber-900/80 via-orange-800/60 to-red-900/80",
-        thumbnail: "/portfolio/df_ui0200.webp",
-        images: ["/portfolio/df_ui0200.webp"],
+        thumbnail: "/portfolio/df_ui0200.mp4",
+        images: ["/portfolio/df_ui0200.mp4"],
     },
     {
         id: "P-004-2",
@@ -98,10 +98,11 @@ const PROJECTS: PortfolioProject[] = [
         description: "던전앤파이터 인게임 프로모션 영상용 에셋을 집중적으로 제작했습니다. 배경 아트워크 및 영상 이펙트용 소스를 구현했습니다.",
         participation: 100,
         gradient: "bg-gradient-to-br from-orange-900/80 via-amber-800/60 to-yellow-900/80",
-        thumbnail: "/portfolio/df_ui0201.webp",
+        thumbnail: "/portfolio/df_ui0201.mp4",
         images: [
-            "/portfolio/df_ui0201.webp",
-            "/portfolio/df_ui0202.webp"
+            "/portfolio/df_ui0201.mp4",
+            "/portfolio/df_ui0202.mp4",
+            "/portfolio/df_ui0203.mp4"
         ],
     },
     {
