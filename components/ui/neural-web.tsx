@@ -18,7 +18,7 @@ export function NeuralWebBackground() {
 
         let animationFrameId: number;
 
-        const GLOBE_RADIUS = 550; // Increased size as requested
+        const GLOBE_RADIUS = 750; // Larger globe for more immersive background
         const DOT_COUNT = 600;
         const NEIGHBOR_COUNT = 4;
 
