@@ -22,7 +22,7 @@ const PROJECTS: PortfolioProject[] = [
             "/portfolio/camfish_main.webp",
             "/portfolio/camfish_workflow.webp",
             "/portfolio/camfish_db.webp",
-            "/portfolio/camfish_docker.webp"
+            "/portfolio/camfish_docker.png"
         ],
     },
     {
