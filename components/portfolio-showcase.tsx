@@ -6,7 +6,97 @@ import { PortfolioCard, type PortfolioProject } from "./portfolio-card";
 import { PortfolioLightbox } from "./portfolio-lightbox";
 
 const PROJECTS: PortfolioProject[] = [
-    // === AI PROJECTS ===
+    // === 1. ComfyUI BMW Contest ===
+    {
+        id: "P-008",
+        title: "ComfyUI BMW Contest",
+        titleKo: "컴피UI BMW 공모전",
+        category: "AI",
+        role: "AI Image Creator",
+        tech: ["ComfyUI", "Stable Diffusion", "Lora Workflow"],
+        description: "ComfyUI 노드 기반 워크플로우를 활용하여 BMW 공모전용 아트워크와 에셋을 생성했습니다. 캐릭터 선정부터 로라(LoRA) 학습, 자동차 그래픽 통합까지 AI 파이프라인 전반을 제어했습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-indigo-900/80 via-blue-800/60 to-cyan-900/80",
+        thumbnail: "/portfolio/bmw_contest.mp4",
+        images: [
+            "/portfolio/bmw_contest.mp4",
+            "/portfolio/bmw_stitched_01_character.jpg",
+            "/portfolio/bmw_stitched_02_lora.jpg",
+            "/portfolio/bmw_stitched_03_video_assets.jpg",
+            "/portfolio/bmw_stitched_04_car_graphics.jpg"
+        ],
+    },
+
+    // === 2~5. GAME UI & TECH-ART ===
+    {
+        id: "P-003",
+        title: "Sudden Attack & Various Artworks",
+        titleKo: "서든어택 UI/UX 개선 및 기타 아트워크",
+        category: "GAME",
+        role: "UI/UX Designer & Concept Artist",
+        tech: ["Game UI", "UX Design", "Usability Test", "Concept Art"],
+        description: "FPS 유저의 시선 동선과 직관성을 최우선으로 고려하여 인게임 UI 디자인과 구조적 사용성을 대폭 개선했습니다. 빠르고 명확한 정보 전달을 통해 전반적인 게임 플레이 경험을 고도화하였으며, 콜오브듀티 등 다양한 프로젝트 톤앤매너에 맞춘 컨셉 아트 및 UI 디자인 작업도 수행하였습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-rose-900/80 via-red-800/60 to-orange-900/80",
+        thumbnail: "/portfolio/sudden_ui01.webp",
+        images: [
+            "/portfolio/sudden_ui01.webp",
+            "/portfolio/sudden_ui0101.webp",
+            "/portfolio/sudden_ui0102.webp",
+            "/portfolio/sudden_ui0103.webp",
+            "/portfolio/cod_053.webp"
+        ],
+    },
+    {
+        id: "P-004-1",
+        title: "Dungeon & Fighter - Game UI",
+        titleKo: "던전앤파이터 인게임 UI",
+        category: "GAME",
+        role: "UI/UX Designer",
+        tech: ["Game UI", "UX Structure", "Tech-Art"],
+        description: "던전앤파이터 게임 내 UI 디자인 및 배경, 캐릭터 드로잉, 영상까지 이벤트 작업을 진행했습니다. 세계관 특유의 톤앤매너를 반영하여 작업했습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-amber-900/80 via-orange-800/60 to-red-900/80",
+        thumbnail: "/portfolio/df_ui0200.mp4",
+        images: ["/portfolio/df_ui0200.mp4"],
+    },
+    {
+        id: "P-004-2",
+        title: "Dungeon & Fighter - Promo Asset",
+        titleKo: "던전앤파이터 프로모션 에셋",
+        category: "GAME",
+        role: "Tech-Art Specialist",
+        tech: ["Promotional Assets", "Concept Art", "Video Assets"],
+        description: "던전앤파이터 인게임 프로모션 에셋을 집중적으로 UI 디자인 및 배경, 캐릭터 드로잉 후 영상까지 제작했습니다. 추가 배경 아트워크 및 영상 이펙트용 소스를 구현했습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-orange-900/80 via-amber-800/60 to-yellow-900/80",
+        thumbnail: "/portfolio/df_ui0201.mp4",
+        images: [
+            "/portfolio/df_ui0201.mp4",
+            "/portfolio/df_ui0202.mp4",
+            "/portfolio/df_ui0203.mp4"
+        ],
+    },
+    {
+        id: "P-009",
+        title: "UI Concept Drawings",
+        titleKo: "UI 컨셉 드로잉 모음",
+        category: "GAME",
+        role: "UI/Concept Designer",
+        tech: ["Digital Drawing", "Concept Art", "Prototyping"],
+        description: "다양한 게임 및 콘텐츠를 위한 UI 기반 컨셉 드로잉입니다. 자유로운 펜 워크와 톤앤매너 적용을 통해 프로젝트의 시각적 방향성을 빠르게 구체화했습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-neutral-800/80 via-zinc-700/60 to-stone-800/80",
+        thumbnail: "/portfolio/drawing_ui03.webp",
+        images: [
+            "/portfolio/drawing_ui03.webp",
+            "/portfolio/drawing_ui0302.webp",
+            "/portfolio/drawing_ui0303.webp",
+            "/portfolio/ui_02_dunfa_image.jpg"
+        ],
+    },
+
+    // === 6~7. AI PROJECTS ===
     {
         id: "P-001",
         title: "CamFish",
@@ -37,96 +127,8 @@ const PROJECTS: PortfolioProject[] = [
         thumbnail: "/portfolio/antigravity_framework.jpg",
         images: ["/portfolio/antigravity_framework.jpg"],
     },
-    {
-        id: "P-008",
-        title: "ComfyUI BMW Contest",
-        titleKo: "컴피UI BMW 공모전",
-        category: "AI",
-        role: "AI Image Creator",
-        tech: ["ComfyUI", "Stable Diffusion", "Lora Workflow"],
-        description: "ComfyUI 노드 기반 워크플로우를 활용하여 BMW 공모전용 아트워크와 에셋을 생성했습니다. 캐릭터 선정부터 로라(LoRA) 학습, 자동차 그래픽 통합까지 AI 파이프라인 전반을 제어했습니다.",
-        participation: 100,
-        gradient: "bg-gradient-to-br from-indigo-900/80 via-blue-800/60 to-cyan-900/80",
-        thumbnail: "/portfolio/bmw_contest.mp4",
-        images: [
-            "/portfolio/bmw_stitched_01_character.jpg",
-            "/portfolio/bmw_stitched_02_lora.jpg",
-            "/portfolio/bmw_stitched_03_video_assets.jpg",
-            "/portfolio/bmw_stitched_04_car_graphics.jpg"
-        ],
-    },
 
-    // === GAME UI & TECH-ART ===
-    {
-        id: "P-003",
-        title: "Sudden Attack & Various Artworks",
-        titleKo: "서든어택 UI/UX 개선 및 기타 아트워크",
-        category: "GAME",
-        role: "UI/UX Designer & Concept Artist",
-        tech: ["Game UI", "UX Design", "Usability Test", "Concept Art"],
-        description: "FPS 유저의 시선 동선과 직관성을 최우선으로 고려하여 인게임 UI 디자인과 구조적 사용성을 대폭 개선했습니다. 빠르고 명확한 정보 전달을 통해 전반적인 게임 플레이 경험을 고도화하였으며, 콜오브듀티 등 다양한 프로젝트 톤앤매너에 맞춘 컨셉 아트 및 UI 디자인 작업도 수행하였습니다.",
-        participation: 100,
-        gradient: "bg-gradient-to-br from-rose-900/80 via-red-800/60 to-orange-900/80",
-        thumbnail: "/portfolio/sudden_ui01.webp",
-        images: [
-            "/portfolio/sudden_ui01.webp",
-            "/portfolio/sudden_ui0101.webp",
-            "/portfolio/sudden_ui0102.webp",
-            "/portfolio/sudden_ui0103.webp",
-            "/portfolio/cod_053.webp"
-        ],
-    },
-    {
-        id: "P-004-1",
-        title: "Dungeon & Fighter - Game UI",
-        titleKo: "던전앤파이터 인게임 UI",
-        category: "GAME",
-        role: "UI/UX Designer",
-        tech: ["Game UI", "UX Structure", "Tech-Art"],
-        description: "던전앤파이터 게임 내 UI 디자인 설계 및 전반적인 고도화 작업을 진행했습니다. 세계관 특유의 톤앤매너를 반영하여 작업했습니다.",
-        participation: 100,
-        gradient: "bg-gradient-to-br from-amber-900/80 via-orange-800/60 to-red-900/80",
-        thumbnail: "/portfolio/df_ui0200.mp4",
-        images: ["/portfolio/df_ui0200.mp4"],
-    },
-    {
-        id: "P-004-2",
-        title: "Dungeon & Fighter - Promo Asset",
-        titleKo: "던전앤파이터 프로모션 에셋",
-        category: "GAME",
-        role: "Tech-Art Specialist",
-        tech: ["Promotional Assets", "Concept Art", "Video Assets"],
-        description: "던전앤파이터 인게임 프로모션 영상용 에셋을 집중적으로 제작했습니다. 배경 아트워크 및 영상 이펙트용 소스를 구현했습니다.",
-        participation: 100,
-        gradient: "bg-gradient-to-br from-orange-900/80 via-amber-800/60 to-yellow-900/80",
-        thumbnail: "/portfolio/df_ui0201.mp4",
-        images: [
-            "/portfolio/df_ui0201.mp4",
-            "/portfolio/df_ui0202.mp4",
-            "/portfolio/df_ui0203.mp4"
-        ],
-    },
-
-    {
-        id: "P-009",
-        title: "UI Concept Drawings",
-        titleKo: "UI 컨셉 드로잉 모음",
-        category: "GAME",
-        role: "UI/Concept Designer",
-        tech: ["Digital Drawing", "Concept Art", "Prototyping"],
-        description: "다양한 게임 및 콘텐츠를 위한 UI 기반 컨셉 드로잉입니다. 자유로운 펜 워크와 톤앤매너 적용을 통해 프로젝트의 시각적 방향성을 빠르게 구체화했습니다.",
-        participation: 100,
-        gradient: "bg-gradient-to-br from-neutral-800/80 via-zinc-700/60 to-stone-800/80",
-        thumbnail: "/portfolio/drawing_ui03.webp",
-        images: [
-            "/portfolio/drawing_ui03.webp",
-            "/portfolio/drawing_ui0302.webp",
-            "/portfolio/drawing_ui0303.webp",
-            "/portfolio/ui_02_dunfa_image.jpg"
-        ],
-    },
-
-    // === WEB ENGINEERING & PUBLISHING ===
+    // === 8~14. WEB ENGINEERING & PUBLISHING ===
     {
         id: "P-006-1",
         title: "Beusable Forum",
