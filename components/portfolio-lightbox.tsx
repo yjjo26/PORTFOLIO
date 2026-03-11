@@ -174,7 +174,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                 {/* Description */}
                                 <div>
                                     <div className="text-[10px] font-mono text-gray-500 tracking-widest mb-3">DESCRIPTION</div>
-                                    <p className="text-gray-300 leading-relaxed text-sm font-sans">
+                                    <p className="text-gray-300 leading-relaxed text-sm font-sans whitespace-pre-line">
                                         {project.description}
                                     </p>
                                 </div>
