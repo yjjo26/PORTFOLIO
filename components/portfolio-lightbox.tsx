@@ -224,6 +224,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                                                 src={imgSrc}
                                                                 alt={`${project.title} screenshot ${idx + 1}`}
                                                                 className="w-full h-auto object-contain"
+                                                                style={{ filter: imgSrc.toLowerCase().includes('docker') ? 'blur(10px)' : 'none' }}
                                                             />
                                                             {/* Zoom Hint */}
                                                             <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/20 transition-colors flex items-center justify-center">
@@ -287,6 +288,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                             src={zoomedImage}
                             alt="Zoomed view"
                             className="max-w-[95vw] max-h-[95vh] object-contain rounded-lg"
+                            style={{ filter: zoomedImage.toLowerCase().includes('docker') ? 'blur(15px)' : 'none' }}
                             onClick={(e) => e.stopPropagation()}
                         />
                     </motion.div>
