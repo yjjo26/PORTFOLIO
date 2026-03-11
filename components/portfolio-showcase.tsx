@@ -14,7 +14,7 @@ const PROJECTS: PortfolioProject[] = [
         category: "AI",
         role: "AI Product Engineer & Full-Stack",
         tech: ["n8n", "Supabase", "Vector Search", "Naver Map API", "Next.js"],
-        description: "n8n, Supabase를 활용한 백엔드 데이터 수집 및 자동화 파이프라인을 구축했습니다. nomic-embed-text 모델 기반 벡터 검색(Vector Search)을 도입하여, 사용자 자연어 의도에 맞춘 최적의 스팟 및 경유지 추천 로직을 추가했습니다. 프론트엔드 예외 처리 및 Naver Map 렌더링 최적화 등 풀스택 트러블슈팅을 주도적으로 수행하였습니다.",
+        description: "n8n, Supabase를 활용한 백엔드 데이터 수집 및 자동화 파이프라인을 구축했습니다. nomic-embed-text 모델 기반 벡터 검색(Vector Search)을 도입하여, 사용자 자연어 의도에 맞춘 최적의 스팟 및 경유지 추천 로직을 추가했습니다.(추가 청소 SNS 인증 및 포인트 쇼핑 구축까지) 프론트엔드 예외 처리 및 Naver Map 렌더링 최적화 등 풀스택 트러블슈팅을 주도적으로 수행하였습니다.<br>(공공데이터 여러개 수집 > 데이터에 추가 상세 데이터 검색 > 데이터 표준화 > DB 등록)<br>(데이터 검색 모델 > 검색 데이터 표준화 > 추가 상세 데이터 검색 > DB 등록)",
         participation: 100,
         gradient: "bg-gradient-to-br from-cyan-900/80 via-blue-800/60 to-indigo-900/80",
         thumbnail: "/portfolio/camfish_main.webp",
@@ -49,10 +49,10 @@ const PROJECTS: PortfolioProject[] = [
         gradient: "bg-gradient-to-br from-indigo-900/80 via-blue-800/60 to-cyan-900/80",
         thumbnail: "/portfolio/bmw_contest.mp4",
         images: [
-            "/portfolio/bmw_stitched_01_01캐릭터선정.jpg",
-            "/portfolio/bmw_stitched_02_02로라.jpg",
-            "/portfolio/bmw_stitched_03_03영상이미지정리.jpg",
-            "/portfolio/bmw_stitched_04_04자동차정리.jpg"
+            "/portfolio/bmw_stitched_01_character.jpg",
+            "/portfolio/bmw_stitched_02_lora.jpg",
+            "/portfolio/bmw_stitched_03_video_assets.jpg",
+            "/portfolio/bmw_stitched_04_car_graphics.jpg"
         ],
     },
 
@@ -167,7 +167,7 @@ const PROJECTS: PortfolioProject[] = [
         role: "Frontend Publisher",
         tech: ["JavaScript", "jQuery", "HTML/CSS", "Web Accessibility"],
         description: "신구대학교 홈페이지 반응형 웹 리뉴얼을 진행했습니다. 엔터프라이즈 CMS 구조 내 마크업 구축 및 시각·구조적 최적화를 통해 '웹 접근성 인증 마크'를 획득했습니다.",
-        participation: 100,
+        participation: 60,
         gradient: "bg-gradient-to-br from-blue-900/80 via-indigo-800/60 to-slate-900/80",
         thumbnail: "/portfolio/shingu_v1_main.webp",
         images: [
@@ -200,7 +200,7 @@ const PROJECTS: PortfolioProject[] = [
         role: "Frontend Publisher",
         tech: ["JavaScript", "jQuery", "HTML/CSS", "Web Accessibility"],
         description: "세종사이버대학교 주요 홈페이지 반응형 웹 리뉴얼 및 시각/구조적 최적화를 구축하여 안정적인 UX 설계 및 웹 접근성을 준수했습니다.",
-        participation: 100,
+        participation: 40,
         gradient: "bg-gradient-to-br from-indigo-900/80 via-purple-800/60 to-fuchsia-900/80",
         thumbnail: "/portfolio/sejong_main.webp",
         images: [
@@ -217,7 +217,7 @@ const PROJECTS: PortfolioProject[] = [
         role: "Frontend Publisher",
         tech: ["JavaScript", "jQuery", "HTML/CSS", "Web Accessibility"],
         description: "중앙대학교 통합 웹 리뉴얼 및 다변화된 디바이스 환경에서의 반응형 웹 접근성을 고도화하여 사용자 경험을 대폭 개선했습니다.",
-        participation: 100,
+        participation: 20,
         gradient: "bg-gradient-to-br from-slate-900/80 via-gray-800/60 to-zinc-900/80",
         thumbnail: "/portfolio/cau_main.webp",
         images: [
