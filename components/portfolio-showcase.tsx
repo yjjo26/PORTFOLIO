@@ -17,9 +17,10 @@ const PROJECTS: PortfolioProject[] = [
         description: "n8n, Supabase, Docker를 활용한 백엔드 데이터 수집 및 자동화 파이프라인을 구축했습니다. nomic-embed-text 모델 기반 벡터 검색(Vector Search)을 도입하여, 사용자 자연어 의도에 맞춘 최적의 스팟 및 경유지 추천 로직을 추가했습니다.(추가 청소 SNS 인증 및 포인트 쇼핑 구축까지) 프론트엔드 예외 처리 및 Naver Map 렌더링 최적화 등 풀스택 트러블슈팅을 주도적으로 수행하였습니다.\n(공공데이터 여러개 수집 > 데이터에 추가 상세 데이터 검색 > 데이터 표준화 > DB 등록)\n(데이터 검색 모델 > 검색 데이터 표준화 > 추가 상세 데이터 검색 > DB 등록)",
         participation: 100,
         gradient: "bg-gradient-to-br from-cyan-900/80 via-blue-800/60 to-indigo-900/80",
-        thumbnail: "/portfolio/camfish_main.webp",
+        thumbnail: "/portfolio/00_캠피시_01메인.png",
         images: [
-            "/portfolio/camfish_main.webp",
+            "/portfolio/00_캠피시_01메인.png",
+            "/portfolio/00_캠피시_01서브.png",
             "/portfolio/camfish_workflow.webp",
             "/portfolio/camfish_db.webp",
             "/portfolio/camfish_docker.png"
