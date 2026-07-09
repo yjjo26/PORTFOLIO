@@ -21,10 +21,6 @@ const PROJECTS: PortfolioProject[] = [
         images: [
             "/portfolio/jubup_main_stitched.png",
             "/portfolio/jubup_characters.png",
-            "/portfolio/jubup_map_mobile.png",
-            "/portfolio/jubup_cleanup_mobile.png",
-            "/portfolio/jubup_shop_mobile.png",
-            "/portfolio/jubup_jubtube_mobile.png",
             "/portfolio/jubup_workflow.webp",
             "/portfolio/jubup_db.webp",
             "/portfolio/jubup_docker.png"
