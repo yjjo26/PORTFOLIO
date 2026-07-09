@@ -59,11 +59,11 @@ export function NeuralWebBackground() {
         };
 
         const rotate = (p: { x: number, y: number, z: number }, rotX: number, rotY: number) => {
-            let x = p.x * Math.cos(rotY) - p.z * Math.sin(rotY);
+                    const x = p.x * Math.cos(rotY) - p.z * Math.sin(rotY);
             let z = p.x * Math.sin(rotY) + p.z * Math.cos(rotY);
             let y = p.y;
 
-            let yNew = y * Math.cos(rotX) - z * Math.sin(rotX);
+            const yNew = y * Math.cos(rotX) - z * Math.sin(rotX);
             z = y * Math.sin(rotX) + z * Math.cos(rotX);
             y = yNew;
 

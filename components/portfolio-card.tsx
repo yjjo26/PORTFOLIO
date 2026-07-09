@@ -2,19 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export interface PortfolioProject {
-    id: string;
-    title: string;
-    titleKo: string;
-    category: "WEB" | "GAME" | "AI";
-    role: string;
-    tech: string[];
-    description: string;
-    participation: number;
-    gradient: string;
-    thumbnail?: string;
-    images: string[];
-}
+import { PortfolioProject } from "@/lib/domain/models/project";
 
 interface PortfolioCardProps {
     project: PortfolioProject;

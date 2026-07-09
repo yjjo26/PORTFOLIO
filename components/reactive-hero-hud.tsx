@@ -2,7 +2,7 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ArrowUpRight, Code, Search, Database, Globe, Command, Cpu } from "lucide-react";
+import { Code, Search, Database, Globe, Cpu } from "lucide-react";
 import { DecodingText } from "@/components/ui/decoding-text";
 
 export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void }) {
@@ -13,29 +13,35 @@ export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void
     const mouseY = useMotionValue(0);
 
     // Ultra-smooth, floaty physics for Clean SF
-    const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [5, -5]), { stiffness: 40, damping: 30 });
-    const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-5, 5]), { stiffness: 40, damping: 30 });
+    const springX = useSpring(mouseX, { stiffness: 100, damping: 20 });
+    const springY = useSpring(mouseY, { stiffness: 100, damping: 20 });
 
-    const handleMouseMove = (e: React.MouseEvent) => {
-        const { clientX, clientY } = e;
-        const { innerWidth, innerHeight } = window;
-        mouseX.set((clientX / innerWidth) - 0.5);
-        mouseY.set((clientY / innerHeight) - 0.5);
+    const rotateX = useTransform(springY, [-300, 300], [15, -15]);
+    const rotateY = useTransform(springX, [-300, 300], [-15, 15]);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+        const x = e.clientX - rect.left - width / 2;
+        const y = e.clientY - rect.top - height / 2;
+        mouseX.set(x);
+        mouseY.set(y);
     };
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setProgress(prev => {
+            setProgress((prev) => {
                 if (prev >= 100) {
                     clearInterval(interval);
                     setStatus("TRANSITION");
                     setTimeout(() => {
                         setStatus("DASHBOARD");
                         onBootComplete();
-                    }, 1000);
+                    }, 800);
                     return 100;
                 }
-                return Math.min(prev + 2, 100);
+                return prev + 1.5;
             });
         }, 20);
         return () => clearInterval(interval);
@@ -47,7 +53,6 @@ export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void
             onMouseMove={handleMouseMove}
         >
             {/* Minimal Grid Background */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 pointer-events-none mix-blend-screen" />
 
             {/* Clean Top Bar */}

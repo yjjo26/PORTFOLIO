@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HUDContainer } from "@/components/ui/hud-container";
+
 import { useEffect, useRef, useState, useCallback } from "react";
 
 interface Node {

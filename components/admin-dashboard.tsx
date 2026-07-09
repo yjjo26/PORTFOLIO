@@ -75,7 +75,7 @@ export function AdminDashboardSection() {
                                         key={i}
                                         className="w-1.5 rounded-t-full bg-sf-blue/40"
                                         initial={{ height: "10%" }}
-                                        animate={{ height: `${Math.random() * 60 + 20}%` }}
+                                        animate={{ height: `${40 + Math.sin(i * 0.5) * 20}%` }}
                                         transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", delay: i * 0.05 }}
                                     />
                                 ))}

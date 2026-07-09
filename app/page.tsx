@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ReactiveHeroHUD } from "@/components/reactive-hero-hud";
 import { NeuralWebBackground } from "@/components/ui/neural-web";
-import { HUDContainer } from "@/components/ui/hud-container";
+
 import { MCPGraphSection } from "@/components/mcp-graph";
 import { SlackBotSection } from "@/components/slack-bot";
 import { ScanlineOverlay } from "@/components/ui/scanline-overlay";

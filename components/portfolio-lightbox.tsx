@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useCallback, useState } from "react";
-import type { PortfolioProject } from "./portfolio-card";
+import { PortfolioProject } from "@/lib/domain/models/project";
 
 interface LightboxProps {
     project: PortfolioProject | null;
@@ -28,6 +28,12 @@ const categoryLabels: Record<string, string> = {
 
 export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, hasNext }: LightboxProps) {
     const [zoomedImage, setZoomedImage] = useState<string | null>(null);
+    const [prevProjectId, setPrevProjectId] = useState<string | null>(null);
+
+    if (project?.id !== prevProjectId) {
+        setPrevProjectId(project?.id || null);
+        setZoomedImage(null);
+    }
 
     const handleKeyDown = useCallback((e: KeyboardEvent) => {
         if (e.key === "Escape") {
@@ -51,11 +57,6 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
             window.removeEventListener("keydown", handleKeyDown);
         };
     }, [project, handleKeyDown]);
-
-    // Reset zoom when project changes
-    useEffect(() => {
-        setZoomedImage(null);
-    }, [project?.id]);
 
     return (
         <>
