@@ -279,9 +279,7 @@ const PROJECTS: PortfolioProject[] = [
             "/portfolio/dk_event_spring.jpg",
             "/portfolio/dk_event_summer.jpg",
             "/portfolio/dk_event_attendance.jpg",
-            "/portfolio/dk_event_chuseok.jpg",
-            "/portfolio/dk_event_hyperserver.jpg",
-            "/portfolio/dk_event_whiteday.jpg",
+            "/portfolio/dk_event_hyperserver.png",
             "/portfolio/dk_event_may.jpg"
         ],
     },
