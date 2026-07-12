@@ -189,7 +189,8 @@ const PROJECTS: PortfolioProject[] = [
         thumbnail: "/portfolio/inha_v2_main.webp",
         images: [
             "/portfolio/inha_v2_main.webp",
-            "/portfolio/inha_v2_sub.webp"
+            "/portfolio/inha_v2_sub.webp",
+            "/portfolio/univ_inha.webp"
         ],
     },
     {
