@@ -30,8 +30,9 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
     const [zoomedImage, setZoomedImage] = useState<string | null>(null);
     const [prevProjectId, setPrevProjectId] = useState<string | null>(null);
 
-    if (project?.id !== prevProjectId) {
-        setPrevProjectId(project?.id || null);
+    const projectId = project?.id || null;
+    if (projectId !== prevProjectId) {
+        setPrevProjectId(projectId);
         setZoomedImage(null);
     }
 
