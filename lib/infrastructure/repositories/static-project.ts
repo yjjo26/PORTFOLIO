@@ -260,6 +260,41 @@ const PROJECTS: PortfolioProject[] = [
         ],
     },
     {
+        id: "P-007-7",
+        title: "Tomato Class E-Learning Promotions",
+        titleKo: "토마토클래스 영어 교육 브랜드 프로모션 디자인 및 마크업",
+        category: "WEB",
+        role: "UI/UX Designer & Publisher",
+        tech: ["E-Learning UI", "Landing Page", "HTML/CSS", "Photoshop"],
+        description: "대학생 및 성인을 타겟으로 하는 영어 교육 브랜드 '토마토클래스'의 대규모 이벤트 프로모션 및 랜딩페이지 디자인 세트를 제작하고 웹 표준 마크업을 전담 구현했습니다. 오픽, 토익, 영어 생기초 인강 등 각 교육 상품의 특징과 브랜드 컬러를 극대화한 독창적인 레이아웃을 제공하여 가입 전환율(CTR) 향상에 기여했습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-red-950/80 via-orange-900/60 to-red-900/80",
+        thumbnail: "/portfolio/tomato_main.jpg",
+        images: [
+            "/portfolio/tomato_main.jpg",
+            "/portfolio/tomato_chance.jpg",
+            "/portfolio/tomato_basic.jpg",
+            "/portfolio/tomato_opic.jpg",
+            "/portfolio/tomato_toeic.jpg"
+        ],
+    },
+    {
+        id: "P-007-8",
+        title: "Korea Coffee Association Web Portal",
+        titleKo: "사단법인 한국커피협회 공식 웹 포털 리뉴얼",
+        category: "WEB",
+        role: "Frontend Publisher",
+        tech: ["JavaScript", "jQuery", "HTML/CSS", "Cross-Browsing"],
+        description: "사단법인 한국커피협회 공식 홈페이지의 사용자 경험 개선을 위해 반응형 웹 리뉴얼 퍼블리싱을 전담 구축했습니다. 바리스타 자격증 접수 및 수험생 편의를 고려한 그리드 정렬 및 안정적인 접근성을 위해 표준 마크업을 준수했습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-amber-950/80 via-yellow-950/60 to-yellow-900/80",
+        thumbnail: "/portfolio/coffee_main.jpg",
+        images: [
+            "/portfolio/coffee_main.jpg",
+            "/portfolio/coffee_sub.jpg"
+        ],
+    },
+    {
         id: "P-010",
         title: "Web Banners & Promotions",
         titleKo: "웹 배너 디자인 모음",
@@ -312,6 +347,22 @@ const PROJECTS: PortfolioProject[] = [
             "/portfolio/dk_event_attendance.jpg",
             "/portfolio/dk_event_hyperserver.png",
             "/portfolio/dk_event_may.jpg"
+        ],
+    },
+    {
+        id: "P-013",
+        title: "Halo Games Mobile Promotions",
+        titleKo: "할로게임즈 모바일 게임 프로모션 및 이벤트 페이지 구축",
+        category: "WEB",
+        role: "UI/UX Designer & Publisher",
+        tech: ["Game UI Design", "Event Promotion Design", "HTML/CSS", "jQuery"],
+        description: "할로게임즈의 신작 모바일 게임 '동화전쟁' 및 '몬스터클리어' 사전 예약 런칭 이벤트 페이지를 구축했습니다. 게임 특유의 그래픽 리소스와 세계관 톤앤매너를 연동하여 모바일 및 웹 사용성을 대폭 강화하고 생동감 있는 그래픽을 최적화했습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-indigo-950/80 via-fuchsia-900/60 to-purple-900/80",
+        thumbnail: "/portfolio/halo_fairytales.jpg",
+        images: [
+            "/portfolio/halo_fairytales.jpg",
+            "/portfolio/halo_monsterclear.jpg"
         ],
     },
 ];
