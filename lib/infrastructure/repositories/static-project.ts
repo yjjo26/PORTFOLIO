@@ -244,6 +244,41 @@ const PROJECTS: PortfolioProject[] = [
             "/portfolio/banner_web99banner05.webp"
         ],
     },
+    {
+        id: "P-011",
+        title: "AIIA Pre-registration Site",
+        titleKo: "모바일 게임 AIIA (아이아) 사전예약 프로모션 구축",
+        category: "WEB",
+        role: "UI/UX Designer & Publisher",
+        tech: ["JavaScript", "HTML/CSS", "Mobile Responsive", "Promotional UI"],
+        description: "마상소프트의 모바일 액션 RPG 게임 AIIA(아이아)의 런칭 사전예약 사이트와 초청장 이벤트를 디자인 및 퍼블리싱(100%) 하였습니다. 각 캐릭터별 비주얼 톤앤매너에 맞춤형 레이아웃 구성 및 이벤트 초대장 발송 링크 생성 등의 프론트엔드 연동을 구현했습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-red-950/80 via-rose-900/60 to-red-900/80",
+        thumbnail: "/portfolio/extracted_page_12.png",
+        images: [
+            "/portfolio/extracted_page_12.png"
+        ],
+    },
+    {
+        id: "P-012",
+        title: "DK Online Event & Site Ops",
+        titleKo: "DK 온라인 웹사이트 리뉴얼 및 이벤트 프로모션 디자인",
+        category: "WEB",
+        role: "UI/UX Designer & Publisher",
+        tech: ["JavaScript", "jQuery", "HTML/CSS", "Event Promotion UI", "Graphic Design"],
+        description: "마상소프트의 MMORPG 게임 'DK온라인' 공식 홈페이지 리뉴얼 및 정기 이벤트 프로모션 웹페이지를 디자인/퍼블리싱(100%) 하였습니다. 크리스마스, 봄 나무 사랑 이벤트, 신규/복귀 유저 지원 등 계절별·업데이트별 테마 페이지를 맞춤형 비주얼 아트로 전담 구축했습니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-amber-950/80 via-yellow-900/60 to-amber-900/80",
+        thumbnail: "/portfolio/dk_online_thumbnail.png",
+        images: [
+            "/portfolio/dk_online_thumbnail.png",
+            "/portfolio/extracted_page_13.png",
+            "/portfolio/extracted_page_15.png",
+            "/portfolio/extracted_page_16.png",
+            "/portfolio/extracted_page_17.png",
+            "/portfolio/extracted_page_18.png"
+        ],
+    },
 ];
 
 export class StaticProjectRepository implements IProjectRepository {
