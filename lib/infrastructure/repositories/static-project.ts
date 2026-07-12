@@ -254,9 +254,10 @@ const PROJECTS: PortfolioProject[] = [
         description: "마상소프트의 모바일 액션 RPG 게임 AIIA(아이아)의 런칭 사전예약 사이트와 초청장 이벤트를 디자인 및 퍼블리싱(100%) 하였습니다. 각 캐릭터별 비주얼 톤앤매너에 맞춤형 레이아웃 구성 및 이벤트 초대장 발송 링크 생성 등의 프론트엔드 연동을 구현했습니다.",
         participation: 100,
         gradient: "bg-gradient-to-br from-red-950/80 via-rose-900/60 to-red-900/80",
-        thumbnail: "/portfolio/extracted_page_12.png",
+        thumbnail: "/portfolio/aiia_desktop.png",
         images: [
-            "/portfolio/extracted_page_12.png"
+            "/portfolio/aiia_desktop.png",
+            "/portfolio/aiia_mobile.png"
         ],
     },
     {
@@ -272,11 +273,12 @@ const PROJECTS: PortfolioProject[] = [
         thumbnail: "/portfolio/dk_online_thumbnail.png",
         images: [
             "/portfolio/dk_online_thumbnail.png",
-            "/portfolio/extracted_page_13.png",
-            "/portfolio/extracted_page_15.png",
-            "/portfolio/extracted_page_16.png",
-            "/portfolio/extracted_page_17.png",
-            "/portfolio/extracted_page_18.png"
+            "/portfolio/dk_website_main.png",
+            "/portfolio/dk_event_pearl.png",
+            "/portfolio/dk_event_summer.png",
+            "/portfolio/dk_event_tower.png",
+            "/portfolio/dk_event_attendance.png",
+            "/portfolio/dk_banners_grid.png"
         ],
     },
 ];
