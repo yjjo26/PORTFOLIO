@@ -228,38 +228,6 @@ const PROJECTS: PortfolioProject[] = [
         ],
     },
     {
-        id: "P-007-5",
-        title: "Transportation Information Service Center",
-        titleKo: "교통정보서비스센터 반응형 웹 구축",
-        category: "WEB",
-        role: "Frontend Publisher",
-        tech: ["JavaScript", "jQuery", "HTML/CSS", "Cross-Browsing"],
-        description: "교통정보서비스센터 홈페이지 반응형 웹 표준화 구축 및 다변화된 브라우저 환경에서의 웹 접근성 최적화를 위해 크로스 브라우징 및 최적화된 시각 마크업 작업을 담당했습니다.",
-        participation: 100,
-        gradient: "bg-gradient-to-br from-blue-900/80 via-slate-800/60 to-cyan-900/80",
-        thumbnail: "/portfolio/traffic_main.jpg",
-        images: [
-            "/portfolio/traffic_main.jpg",
-            "/portfolio/traffic_sub.jpg"
-        ],
-    },
-    {
-        id: "P-007-6",
-        title: "Canon Korea E-Commerce & Mobile Web",
-        titleKo: "캐논코리아 컨슈머 이미징 쇼핑몰 및 모바일 웹 구축",
-        category: "WEB",
-        role: "UI/UX Designer & Publisher",
-        tech: ["E-Commerce UI", "Mobile Web Optimization", "HTML/CSS", "jQuery"],
-        description: "캐논코리아 컨슈머 이미징 쇼핑몰 및 모바일 대응 웹 페이지의 UI 디자인과 퍼블리싱을 전담 구축했습니다. 대형 이커머스 서비스에 최적화된 UI 가이드라인을 수립하고 모바일 기기에서의 시각적 레이아웃 가독성을 극대화했습니다.",
-        participation: 100,
-        gradient: "bg-gradient-to-br from-red-950/80 via-rose-900/60 to-stone-900/80",
-        thumbnail: "/portfolio/canon_main.jpg",
-        images: [
-            "/portfolio/canon_main.jpg",
-            "/portfolio/canon_mobile.jpg"
-        ],
-    },
-    {
         id: "P-007-7",
         title: "Tomato Class E-Learning Promotions",
         titleKo: "토마토클래스 영어 교육 브랜드 프로모션 디자인 및 마크업",
