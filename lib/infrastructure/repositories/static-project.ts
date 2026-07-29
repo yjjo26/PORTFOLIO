@@ -2,7 +2,60 @@ import { PortfolioProject } from "../../domain/models/project";
 import { IProjectRepository } from "../../domain/repositories/project-repo";
 
 const PROJECTS: PortfolioProject[] = [
-    // === 1~2. AI PROJECTS (TOP) ===
+    // === 1~3. AI PROJECTS (TOP) ===
+    {
+        id: "P-014",
+        title: "ProtoPang",
+        titleKo: "프로토팡 (기획서 → 플레이 가능한 프로토타입 생성기)",
+        category: "AI",
+        role: "Product Engineer (기획 · 설계 · 구현 · QA 전담)",
+        tech: ["React 18", "TypeScript", "Vite", "Gemini 2.5", "XML DSL 설계", "Monte-Carlo 시뮬레이션", "Sandboxed iframe", "Cloudflare Pages"],
+        description: "기획서를 넣으면 클릭되는 프로토타입과 밸런스 실측이 함께 나오는 도구입니다. 기획서가 없으면 대화로 함께 만들고, 확정하면 빌드 인계 문서 8종이 자동으로 나옵니다.\n\n기획을 다 써도 \'실제로 어떻게 느껴지는가\'와 \'숫자가 의도대로인가\'는 만들어봐야 압니다. 보통 개발자 몇 명이 몇 주를 쓰는 그 구간을 하루로 줄이는 시도입니다.",
+        participation: 100,
+        gradient: "bg-gradient-to-br from-fuchsia-900/80 via-violet-800/60 to-indigo-900/80",
+        thumbnail: "/portfolio/protopang_00_thumb.png",
+        images: [
+            "/portfolio/protopang_02_match3.png",
+            "/portfolio/protopang_01_landing.png",
+            "/portfolio/protopang_03_assembly.png",
+            "/portfolio/protopang_04_verify.png",
+            "/portfolio/protopang_05_handoff.png"
+        ],
+        links: [
+            { label: "라이브 데모 열기", url: "https://protopang.pages.dev", primary: true },
+            { label: "매치3 프로토타입 바로 보기", url: "https://protopang.pages.dev/#/build" },
+        ],
+        highlights: [
+            {
+                label: "핵심 주장",
+                body: "AI 가 코드를 쓴 것이 아니라, AI 출력을 제약·검증·거절하는 층을 직접 설계했습니다.\n\n처음에는 LLM 이 JSX 코드를 쓰게 했습니다. 문법 오류 한 줄에 화면이 백지가 되고, 무한 루프가 프로토타입을 통째로 얼렸습니다. 원인은 버그가 아니라 \'코드가 신뢰 경계\'라는 구조 자체였습니다.\n\n그래서 뒤집었습니다. LLM 은 XML 데이터만 쓰고, 실행되는 코드는 제가 쓴 고정 런타임뿐입니다. 결과 — 생성 대기 60~100초에서 0초로, 문법 오류로 죽는 것이 구조적으로 불가능, eval 되는 문자열 0개.",
+            },
+            {
+                label: "어떻게 도는가",
+                body: "분해 → 조립 → 검증 세 단계입니다.\n\n분해: 조정할 수치, 동작 규칙, 화면, 그리고 기획서에 안 적힌 것까지 나눕니다. 각 항목에 근거가 된 원문을 붙입니다.\n조립: 태그 하나가 부품 하나입니다. XML 태그 36개가 UI 부품 36개와 1:1 로 맞습니다.\n검증: 로직을 순수 함수로 강제해 화면 없이 1만 회 시뮬레이션합니다.",
+            },
+            {
+                label: "검증 — 명세 vs 실측",
+                body: "기획서에 적힌 숫자와 실제로 돌렸을 때 나오는 숫자를 나란히 놓습니다.\n\n· 성장 기획서 \'30일 안에 20레벨\' → 시뮬레이션 57일 (1.9배)\n· 가챠 SSR 명세 3% → 실측 2.9%\n· 매치3 \'20수로 별 1개(600점)\' → 실측 680점\n\n허용 오차는 고정값이 아니라 표본오차 4σ(4×√(p(1-p)/N))로 잡았습니다. 확률이 클수록 실측이 더 흔들리는데, 1%p 고정으로 두었더니 정상인 값이 실패로 떴기 때문입니다.",
+            },
+            {
+                label: "못 하는 것을 말합니다",
+                body: "매 프레임 물리가 필요한 액션 게임과 실시간 멀티플레이는 만들지 않고 범위 밖으로 명시합니다.\n\n만들 수 없는 문서를 받으면 그럴듯한 것을 지어내지 않고 이유를 적어 거절합니다. 잴 수 없는 목표는 \'검증 중\'이라 하지 않고 \'자동 검증 불가\'라고 표시합니다.\n\n재화가 떨어져 시뮬레이션이 막히면 의미 없는 평균 대신 \'보석이 부족합니다 — 10회에서 멈췄습니다. 시작 재화를 올리고 다시 보세요\'라고 이유와 대처법을 말합니다.",
+            },
+            {
+                label: "확정 → 빌드 인계 문서 8종",
+                body: "프로토타입이 실제로 돌린 값 그대로 마크다운 문서를 뽑습니다. 기획서 · 시스템 명세 · 밸런스표 · 검증 리포트 · 리소스 명세 · 미해결 항목 · 설계 원본.\n\n그중 가장 중요한 것은 \'미해결\'입니다. 툴이 대신 정한 가정과 명세 vs 실측 차이를 모았습니다. 사람이 손으로 옮겨 적으면 이 둘이 제일 먼저 사라지는데, 정작 사고는 거기서 납니다.",
+            },
+            {
+                label: "품질 — 테스트 140개, QA 3라운드",
+                body: "직접 수행한 QA 에서 `</script>` 샌드박스 탈출 취약점을 실증해 차단했습니다. ErrorBoundary 부재로 인한 화이트스크린, 포커스 링 누락(WCAG 2.4.7), CSS 셀렉터 충돌로 기존 화면이 파손된 건도 잡았습니다.\n\n포트폴리오용 스크린샷을 찍다가 조립도 패널이 \'수치 연결 0/5\'라고 거짓 보고하는 것을 발견해, 코드 정규식 스캔에서 설계 트리 직접 추적으로 바꿨습니다.",
+            },
+            {
+                label: "리소스",
+                body: "퍼즐 타일 캐릭터는 상용 게임 리소스를 쓰지 않고 인라인 SVG 로 직접 그렸습니다. 파일도 네트워크 요청도 저작권 부담도 없고, 리소스 팩만 교체하면 되는 구조로 두었습니다.",
+            },
+        ],
+    },
     {
         id: "P-001",
         title: "JubUp",

@@ -144,6 +144,28 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
 
                             {/* Details */}
                             <div className="p-4 sm:p-8 md:p-12 space-y-6 sm:space-y-8">
+                                {/* 바로가기 — 링크가 있는 프로젝트만. 설명을 읽기 전에 직접 만져볼 수 있게 맨 위에 둔다 */}
+                                {project.links && project.links.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 sm:gap-3">
+                                        {project.links.map((l, i) => (
+                                            <a
+                                                key={i}
+                                                href={l.url}
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                className={
+                                                    l.primary
+                                                        ? "inline-flex items-center gap-2 rounded-xl bg-sf-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-400"
+                                                        : "inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm text-gray-300 transition-colors hover:border-sf-blue/40 hover:text-white"
+                                                }
+                                            >
+                                                {l.label}
+                                                <span aria-hidden="true">↗</span>
+                                            </a>
+                                        ))}
+                                    </div>
+                                )}
+
                                 {/* Meta Row */}
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                                     <div className="space-y-1">
@@ -180,6 +202,25 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                         {project.description}
                                     </p>
                                 </div>
+
+                                {/* 정리 내용 — 소제목별로 나눠 읽기 쉽게 */}
+                                {project.highlights && project.highlights.length > 0 && (
+                                    <div className="space-y-4">
+                                        {project.highlights.map((h, i) => (
+                                            <div
+                                                key={i}
+                                                className="rounded-xl border border-white/5 bg-white/[0.03] p-4 sm:p-5"
+                                            >
+                                                <div className="mb-2 text-xs font-semibold tracking-wide text-sf-blue">
+                                                    {h.label}
+                                                </div>
+                                                <p className="whitespace-pre-line text-sm leading-relaxed text-gray-300">
+                                                    {h.body}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
 
                                 {/* Tech Stack */}
                                 <div>

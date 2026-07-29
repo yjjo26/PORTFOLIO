@@ -6,8 +6,10 @@ import { Code, Search, Database, Globe, Cpu } from "lucide-react";
 import { DecodingText } from "@/components/ui/decoding-text";
 
 export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void }) {
-    const [status, setStatus] = useState<"BOOTING" | "TRANSITION" | "DASHBOARD">("BOOTING");
-    const [progress, setProgress] = useState(0);
+    // 부팅 인트로 제거 (2026-07-29 디렉터 지시) — 들어오자마자 프로젝트가 보이게 한다.
+    // 인트로는 약 2초지만, 방문자가 첫 화면에서 기다릴 이유가 없다.
+    const [status, setStatus] = useState<"BOOTING" | "TRANSITION" | "DASHBOARD">("DASHBOARD");
+    const [progress, setProgress] = useState(100);
 
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -29,22 +31,9 @@ export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void
         mouseY.set(y);
     };
 
+    // 인트로 없이 곧바로 본문을 연다
     useEffect(() => {
-        const interval = setInterval(() => {
-            setProgress((prev) => {
-                if (prev >= 100) {
-                    clearInterval(interval);
-                    setStatus("TRANSITION");
-                    setTimeout(() => {
-                        setStatus("DASHBOARD");
-                        onBootComplete();
-                    }, 800);
-                    return 100;
-                }
-                return prev + 1.5;
-            });
-        }, 20);
-        return () => clearInterval(interval);
+        onBootComplete();
     }, [onBootComplete]);
 
     return (
