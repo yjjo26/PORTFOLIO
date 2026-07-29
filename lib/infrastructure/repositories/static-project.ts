@@ -15,11 +15,18 @@ const PROJECTS: PortfolioProject[] = [
         gradient: "bg-gradient-to-br from-fuchsia-900/80 via-violet-800/60 to-indigo-900/80",
         thumbnail: "/portfolio/protopang_00_thumb.png",
         images: [
+            "/portfolio/protopang_slider.gif",
             "/portfolio/protopang_02_match3.png",
             "/portfolio/protopang_01_landing.png",
             "/portfolio/protopang_03_assembly.png",
             "/portfolio/protopang_04_verify.png",
             "/portfolio/protopang_05_handoff.png"
+        ],
+        stats: [
+            { value: "140", label: "회귀 테스트" },
+            { value: "1만 회", label: "판당 시뮬레이션" },
+            { value: "0초", label: "조립 대기 시간" },
+            { value: "1건", label: "취약점 자체 발견·차단" },
         ],
         links: [
             { label: "라이브 데모 열기", url: "https://protopang.pages.dev", primary: true },

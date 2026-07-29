@@ -8,6 +8,12 @@ export interface ProjectLink {
     primary?: boolean;
 }
 
+/** 상세 상단에 크게 박을 숫자 — 글은 안 읽어도 이건 본다 */
+export interface ProjectStat {
+    value: string;
+    label: string;
+}
+
 /** 상세에서 소제목 + 본문으로 보여줄 정리 내용 */
 export interface ProjectHighlight {
     label: string;
@@ -30,6 +36,8 @@ export interface PortfolioProject {
     links?: ProjectLink[];
     /** 있으면 설명 아래에 소제목별로 정리되어 나온다 */
     highlights?: ProjectHighlight[];
+    /** 있으면 상세 상단에 숫자 배지로 나온다 */
+    stats?: ProjectStat[];
 }
 
 export type FilterCategory = "ALL" | ProjectCategory;

@@ -166,6 +166,25 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                     </div>
                                 )}
 
+                                {/* 숫자 배지 — 정리 글을 안 읽어도 이건 눈에 들어온다 */}
+                                {project.stats && project.stats.length > 0 && (
+                                    <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4">
+                                        {project.stats.map((s, i) => (
+                                            <div
+                                                key={i}
+                                                className="rounded-xl border border-white/5 bg-white/[0.03] px-4 py-3 text-center"
+                                            >
+                                                <div className="font-mono text-xl font-bold text-sf-blue sm:text-2xl">
+                                                    {s.value}
+                                                </div>
+                                                <div className="mt-1 text-[11px] leading-tight text-gray-400">
+                                                    {s.label}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
                                 {/* Meta Row */}
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                                     <div className="space-y-1">
