@@ -22,7 +22,7 @@ export function AdminDashboardSection() {
                             </h2>
                             <div className="h-0.5 w-12 bg-sf-blue rounded-full mb-6" />
 
-                            <p className="text-base text-gray-400 font-sans leading-relaxed">
+                            <p className="text-base text-gray-300 font-sans leading-relaxed">
                                 Real-time orchestration of multi-agent swarms. Monitoring latency, context cohesion, and operational security with precision.
                             </p>
 
@@ -43,7 +43,7 @@ export function AdminDashboardSection() {
                             {/* Header */}
                             <div className="flex justify-between items-center mb-8 pb-4 border-b border-white/5">
                                 <div className="text-sm font-medium text-white">System Overview</div>
-                                <div className="text-xs font-mono text-gray-500">LIVE_METRICS</div>
+                                <div className="text-xs font-mono text-gray-400">LIVE_METRICS</div>
                             </div>
 
                             {/* Metrics Grid */}
@@ -63,7 +63,7 @@ export function AdminDashboardSection() {
                                     >
                                         <stat.icon className="w-5 h-5 mb-3 text-sf-blue opacity-80" />
                                         <span className="text-2xl font-light text-white">{stat.val}</span>
-                                        <span className="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">{stat.label}</span>
+                                        <span className="text-[10px] text-gray-400 mt-1 uppercase tracking-wide">{stat.label}</span>
                                     </motion.div>
                                 ))}
                             </div>

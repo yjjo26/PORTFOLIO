@@ -53,7 +53,7 @@ export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void
             >
                 <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-sf-blue rounded-full animate-pulse" />
-                    <span className="text-[10px] text-gray-400 font-mono tracking-widest">SYSTEM_OPTIMAL</span>
+                    <span className="text-[10px] text-gray-300 font-mono tracking-widest">SYSTEM_OPTIMAL</span>
                 </div>
                 <div className="text-[10px] text-gray-600 font-mono">
                     {new Date().toISOString().split('T')[0]}
@@ -102,7 +102,7 @@ export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void
                             <h1 className="text-4xl font-light tracking-tight text-white mb-1">
                                 <DecodingText text="AI Engineer" revealSpeed={50} />
                             </h1>
-                            <p className="text-sm text-gray-400 font-mono tracking-wide">
+                            <p className="text-sm text-gray-300 font-mono tracking-wide">
                                 BUILDING INTELLIGENT SYSTEMS
                             </p>
                         </motion.div>

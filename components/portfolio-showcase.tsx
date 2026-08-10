@@ -55,7 +55,7 @@ export function PortfolioShowcase() {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white tracking-tight">
                         Project Archive
                     </h2>
-                    <p className="text-gray-500 font-mono text-sm tracking-wide">
+                    <p className="text-gray-400 font-mono text-sm tracking-wide">
                         DESIGN & PUBLISHING PORTFOLIO
                     </p>
                 </motion.div>
@@ -77,7 +77,7 @@ export function PortfolioShowcase() {
                             }}
                             className={`relative px-5 py-2 rounded-full text-xs font-mono tracking-widest transition-all duration-300 border ${activeFilter === filter.value
                                 ? `${filterColors[filter.value]} border-transparent`
-                                : "border-white/10 text-gray-500 hover:text-white hover:border-white/20 hover:bg-white/5"
+                                : "border-white/10 text-gray-400 hover:text-white hover:border-white/20 hover:bg-white/5"
                                 }`}
                         >
                             {filter.label}
@@ -94,7 +94,7 @@ export function PortfolioShowcase() {
 
                 {/* Project Count */}
                 <div className="text-center mb-8">
-                    <span className="text-[10px] font-mono text-gray-600 tracking-widest">
+                    <span className="text-[11px] font-mono text-gray-400 tracking-widest">
                         PROJECTS_FOUND: {projects.length}
                     </span>
                 </div>

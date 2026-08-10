@@ -99,20 +99,20 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                 {/* Info Area */}
                 <div className="flex flex-col flex-grow p-4 sm:p-6">
                     {/* Role */}
-                    <div className="text-sm text-gray-400 font-mono mb-4 flex items-center gap-2">
+                    <div className="text-sm text-gray-300 font-mono mb-4 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-sf-blue transition-colors" />
                         {project.role}
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow font-sans line-clamp-3">
+                    <p className="text-gray-300 text-sm leading-relaxed mb-6 flex-grow font-sans line-clamp-3">
                         {project.description}
                     </p>
 
                     {/* Participation Bar */}
                     <div className="mb-4">
                         <div className="flex justify-between items-center mb-1.5">
-                            <span className="text-[10px] font-mono text-gray-500 tracking-widest">PARTICIPATION</span>
+                            <span className="text-[10px] font-mono text-gray-400 tracking-widest">PARTICIPATION</span>
                             <span className="text-[10px] font-mono text-sf-blue">{project.participation}%</span>
                         </div>
                         <div className="h-1 bg-white/5 rounded-full overflow-hidden">
@@ -131,7 +131,7 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                         {project.tech.map((t, i) => (
                             <span
                                 key={i}
-                                className="text-[10px] text-gray-500 bg-white/5 px-2 py-0.5 rounded border border-white/5 font-mono"
+                                className="text-[10px] text-gray-400 bg-white/5 px-2 py-0.5 rounded border border-white/5 font-mono"
                             >
                                 {t}
                             </span>

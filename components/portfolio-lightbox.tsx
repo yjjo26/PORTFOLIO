@@ -86,7 +86,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                             {/* Close Button */}
                             <button
                                 onClick={onClose}
-                                className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 p-2 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-all"
+                                className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 p-2 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-all"
                             >
                                 <X size={18} />
                             </button>
@@ -192,17 +192,17 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                 {/* Meta Row */}
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                                     <div className="space-y-1">
-                                        <div className="text-[10px] font-mono text-gray-500 tracking-widest">ROLE</div>
+                                        <div className="text-[10px] font-mono text-gray-400 tracking-widest">ROLE</div>
                                         <div className="text-white text-[14px]">{project.role}</div>
                                     </div>
                                     <div className="space-y-1">
-                                        <div className="text-[10px] font-mono text-gray-500 tracking-widest">CATEGORY</div>
+                                        <div className="text-[10px] font-mono text-gray-400 tracking-widest">CATEGORY</div>
                                         <div className={`text-sm ${categoryColors[project.category]}`}>
                                             {categoryLabels[project.category]}
                                         </div>
                                     </div>
                                     <div className="space-y-1">
-                                        <div className="text-[10px] font-mono text-gray-500 tracking-widest">PARTICIPATION</div>
+                                        <div className="text-[10px] font-mono text-gray-400 tracking-widest">PARTICIPATION</div>
                                         <div className="flex items-center gap-3">
                                             <div className="flex-grow h-1.5 bg-white/5 rounded-full overflow-hidden">
                                                 <div
@@ -220,7 +220,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
 
                                 {/* Description */}
                                 <div>
-                                    <div className="text-[10px] font-mono text-gray-500 tracking-widest mb-3">DESCRIPTION</div>
+                                    <div className="text-[10px] font-mono text-gray-400 tracking-widest mb-3">DESCRIPTION</div>
                                     <p className="text-gray-200 leading-relaxed text-[15px] font-sans whitespace-pre-line">
                                         {project.description}
                                     </p>
@@ -247,7 +247,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
 
                                 {/* Tech Stack */}
                                 <div>
-                                    <div className="text-[10px] font-mono text-gray-500 tracking-widest mb-3">TECH STACK</div>
+                                    <div className="text-[10px] font-mono text-gray-400 tracking-widest mb-3">TECH STACK</div>
                                     <div className="flex flex-wrap gap-2">
                                         {project.tech.map((t, i) => (
                                             <span
@@ -263,7 +263,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                 {/* Project Images Gallery */}
                                 {project.images && project.images.length > 0 && (
                                     <div className="pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-white/5">
-                                        <div className="text-[10px] font-mono text-gray-500 tracking-widest mb-4 sm:mb-6">PROJECT_GALLERY</div>
+                                        <div className="text-[10px] font-mono text-gray-400 tracking-widest mb-4 sm:mb-6">PROJECT_GALLERY</div>
                                         <div className="flex flex-col gap-4 sm:gap-6">
                                             {project.images.map((imgSrc, idx) => (
                                                 <motion.div
@@ -312,7 +312,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                         {hasPrev && (
                             <button
                                 onClick={(e) => { e.stopPropagation(); onPrev(); }}
-                                className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-all backdrop-blur-sm"
+                                className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-all backdrop-blur-sm"
                             >
                                 <ChevronLeft size={20} />
                             </button>
@@ -320,7 +320,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                         {hasNext && (
                             <button
                                 onClick={(e) => { e.stopPropagation(); onNext(); }}
-                                className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-all backdrop-blur-sm"
+                                className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-all backdrop-blur-sm"
                             >
                                 <ChevronRight size={20} />
                             </button>

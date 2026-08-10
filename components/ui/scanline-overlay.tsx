@@ -1,13 +1,8 @@
 export function ScanlineOverlay() {
+    // 스캔라인·RGB 색번짐·비네트는 화면 전체 글자를 뿌옇게 만들어 제거
+    // (2026-08-10 디렉터 지시: 폰트 가독성). 흐르는 스캔 바 하나만 남겨 SF 무드를 유지한다.
     return (
-        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden mix-blend-overlay opacity-30">
-            {/* Scanlines */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))]"
-                style={{ backgroundSize: "100% 4px, 6px 100%" }}
-            />
-            {/* Vignette */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_50%,rgba(0,0,0,0.6)_100%)]" />
-
+        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
             {/* Scan bar animation */}
             <div className="absolute w-full h-[100px] bg-gradient-to-b from-transparent via-stark-cyan/10 to-transparent animate-[scan_8s_linear_infinite]"
                 style={{ top: "-100px" }}

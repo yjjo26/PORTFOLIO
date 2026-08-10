@@ -105,7 +105,7 @@ export function MCPGraphSection() {
                     <h2 className="text-2xl sm:text-3xl font-light text-white mb-2">
                         System Architecture
                     </h2>
-                    <p className="text-gray-500 font-mono text-xs tracking-widest uppercase">
+                    <p className="text-gray-400 font-mono text-xs tracking-widest uppercase">
                         Model Context Protocol Integration
                     </p>
                 </motion.div>
@@ -160,7 +160,7 @@ export function MCPGraphSection() {
                     </div>
 
                     {/* Status Bar */}
-                    <div className="absolute bottom-0 left-0 right-0 h-8 sm:h-10 bg-black/40 border-t border-white/5 backdrop-blur-md flex items-center px-4 sm:px-6 justify-between text-[9px] sm:text-[10px] font-mono text-gray-500">
+                    <div className="absolute bottom-0 left-0 right-0 h-8 sm:h-10 bg-black/40 border-t border-white/5 backdrop-blur-md flex items-center px-4 sm:px-6 justify-between text-[9px] sm:text-[10px] font-mono text-gray-400">
                         <div>NODES_ONLINE: {nodes.length}</div>
                         <div className="flex items-center gap-2">
                             <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />

@@ -40,7 +40,7 @@ export function SlackBotSection() {
                     <h2 className="text-2xl sm:text-4xl font-light text-white mb-2">
                         System Interface
                     </h2>
-                    <p className="text-gray-500">Target Protocol Communication</p>
+                    <p className="text-gray-400">Target Protocol Communication</p>
                 </div>
 
                 <div className="w-full sf-glass rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
@@ -49,7 +49,7 @@ export function SlackBotSection() {
                         <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
                         <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
                         <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
-                        <div className="ml-4 text-xs font-mono text-gray-500">root@ai-core:~</div>
+                        <div className="ml-4 text-xs font-mono text-gray-400">root@ai-core:~</div>
                     </div>
 
                     {/* Chat Area */}
@@ -84,7 +84,7 @@ export function SlackBotSection() {
                             />
                             <button
                                 onClick={handleSend}
-                                className="absolute right-2 top-2 p-2 bg-white/10 rounded-lg text-gray-400 hover:text-white hover:bg-sf-blue hover:shadow-lg transition-all"
+                                className="absolute right-2 top-2 p-2 bg-white/10 rounded-lg text-gray-300 hover:text-white hover:bg-sf-blue hover:shadow-lg transition-all"
                             >
                                 <CornerDownLeft size={16} />
                             </button>

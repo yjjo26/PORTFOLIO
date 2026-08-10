@@ -53,7 +53,7 @@ export function MissionLogSection() {
                     <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">
                         Selected Works
                     </h2>
-                    <p className="text-gray-500 font-mono text-sm tracking-wide">
+                    <p className="text-gray-400 font-mono text-sm tracking-wide">
                         ENGINEERING & INTELLIGENCE
                     </p>
                 </motion.div>

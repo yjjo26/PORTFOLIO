@@ -25,7 +25,7 @@ export function MissionCard({ mission, index }: { mission: Mission; index: numbe
                     <div className="bg-sf-blue/10 text-sf-blue text-[10px] px-3 py-1 rounded-full font-mono tracking-widest border border-sf-blue/20">
                         {mission.id}
                     </div>
-                    <div className={`text-[10px] tracking-widest font-mono ${mission.status === "COMPLETED" ? "text-green-400" : "text-gray-500"}`}>
+                    <div className={`text-[10px] tracking-widest font-mono ${mission.status === "COMPLETED" ? "text-green-400" : "text-gray-400"}`}>
                         {mission.status}
                     </div>
                 </div>
@@ -34,18 +34,18 @@ export function MissionCard({ mission, index }: { mission: Mission; index: numbe
                     {mission.title}
                 </h3>
 
-                <div className="text-sm text-gray-400 font-mono mb-6 flex items-center gap-2">
+                <div className="text-sm text-gray-300 font-mono mb-6 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-sf-blue transition-colors" />
                     {mission.role}
                 </div>
 
-                <p className="text-gray-400 leading-relaxed text-sm mb-8 flex-grow font-sans">
+                <p className="text-gray-300 leading-relaxed text-sm mb-8 flex-grow font-sans">
                     {mission.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mt-auto">
                     {mission.tech.map((t, i) => (
-                        <span key={i} className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded border border-white/5 font-mono">
+                        <span key={i} className="text-xs text-gray-400 bg-white/5 px-2 py-1 rounded border border-white/5 font-mono">
                             {t}
                         </span>
                     ))}
