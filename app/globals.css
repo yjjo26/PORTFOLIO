@@ -9,7 +9,8 @@
   --sf-blue: #2997FF;
   --sf-blue-dim: rgba(41, 151, 255, 0.1);
   --sf-glass-border: rgba(255, 255, 255, 0.15);
-  --sf-glass-bg: rgba(20, 20, 20, 0.6);
+  /* 뒤 네트워크 배경이 카드 안으로 비쳐 글이 안 읽혀 거의 불투명하게 (2026-08-10 디렉터 지시) */
+  --sf-glass-bg: rgba(13, 15, 20, 0.96);
 
   /* Shadows */
   --sf-glow: 0 0 20px rgba(41, 151, 255, 0.3);
@@ -38,6 +39,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-rajdhani), sans-serif;
+  /* 얇은 기본 굵기가 흐릿하다는 지시(2026-08-10) — 본문 기본을 500 으로 */
+  font-weight: 500;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   /* Apple-like font rendering */

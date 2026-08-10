@@ -67,7 +67,7 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                             className="flex flex-col items-center bg-black/55 rounded-2xl px-6 py-4 max-w-full"
                             whileHover={{ scale: 1.02 }}
                         >
-                            <div className="text-white text-xl sm:text-2xl font-light tracking-tight text-center [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
+                            <div className="text-white text-xl sm:text-2xl font-normal tracking-tight text-center [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
                                 {project.title}
                             </div>
                             <div className="text-white/80 text-xs font-mono mt-2 tracking-widest text-center break-keep [text-shadow:0_1px_8px_rgba(0,0,0,0.9)]">
@@ -100,10 +100,13 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                         {project.role}
                     </div>
 
-                    {/* Description */}
-                    <p className="text-gray-300 text-sm leading-relaxed mb-6 flex-grow font-sans line-clamp-3">
-                        {project.description}
-                    </p>
+                    {/* Description — flex-grow 는 래퍼에: p 에 직접 걸면 박스가 늘어나
+                        line-clamp 말줄임(…) 뒤 글이 그대로 보이는 버그가 난다 */}
+                    <div className="flex-grow mb-6">
+                        <p className="text-gray-300 text-sm leading-relaxed font-sans line-clamp-3">
+                            {project.description}
+                        </p>
+                    </div>
 
                     {/* Participation Bar */}
                     <div className="mb-4">

@@ -37,7 +37,7 @@ export function SlackBotSection() {
                     <span className="inline-block py-1 px-3 rounded-full bg-sf-blue/10 text-sf-blue text-xs font-medium mb-4">
                         AI INTEGRATION
                     </span>
-                    <h2 className="text-2xl sm:text-4xl font-light text-white mb-2">
+                    <h2 className="text-2xl sm:text-4xl font-normal text-white mb-2">
                         System Interface
                     </h2>
                     <p className="text-gray-400">Target Protocol Communication</p>

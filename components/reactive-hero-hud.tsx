@@ -99,7 +99,7 @@ export function ReactiveHeroHUD({ onBootComplete }: { onBootComplete: () => void
                             <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sf-blue/10 text-sf-blue mb-2">
                                 <Cpu size={24} />
                             </div>
-                            <h1 className="text-4xl font-light tracking-tight text-white mb-1">
+                            <h1 className="text-4xl font-normal tracking-tight text-white mb-1">
                                 <DecodingText text="AI Engineer" revealSpeed={50} />
                             </h1>
                             <p className="text-sm text-gray-300 font-mono tracking-wide">

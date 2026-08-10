@@ -17,7 +17,7 @@ export function AdminDashboardSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 className="text-3xl md:text-4xl font-light text-white leading-tight mb-4">
+                            <h2 className="text-3xl md:text-4xl font-normal text-white leading-tight mb-4">
                                 Control Plane
                             </h2>
                             <div className="h-0.5 w-12 bg-sf-blue rounded-full mb-6" />
@@ -62,7 +62,7 @@ export function AdminDashboardSection() {
                                         className="bg-white/[0.03] p-4 rounded-2xl flex flex-col items-start hover:bg-white/[0.06] transition-colors"
                                     >
                                         <stat.icon className="w-5 h-5 mb-3 text-sf-blue opacity-80" />
-                                        <span className="text-2xl font-light text-white">{stat.val}</span>
+                                        <span className="text-2xl font-normal text-white">{stat.val}</span>
                                         <span className="text-[10px] text-gray-400 mt-1 uppercase tracking-wide">{stat.label}</span>
                                     </motion.div>
                                 ))}

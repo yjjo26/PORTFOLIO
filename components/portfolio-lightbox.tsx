@@ -121,7 +121,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                         initial={{ y: 20, opacity: 0 }}
                                         animate={{ y: 0, opacity: 1 }}
                                         transition={{ delay: 0.2 }}
-                                        className="text-2xl sm:text-4xl md:text-6xl font-light text-white tracking-tight text-center [text-shadow:0_2px_16px_rgba(0,0,0,0.85)]"
+                                        className="text-2xl sm:text-4xl md:text-6xl font-normal text-white tracking-tight text-center [text-shadow:0_2px_16px_rgba(0,0,0,0.85)]"
                                     >
                                         {project.title}
                                     </motion.h2>

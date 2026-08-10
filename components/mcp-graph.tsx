@@ -102,7 +102,7 @@ export function MCPGraphSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     className="text-center mb-8 sm:mb-12"
                 >
-                    <h2 className="text-2xl sm:text-3xl font-light text-white mb-2">
+                    <h2 className="text-2xl sm:text-3xl font-normal text-white mb-2">
                         System Architecture
                     </h2>
                     <p className="text-gray-400 font-mono text-xs tracking-widest uppercase">

@@ -50,7 +50,7 @@ export function MissionLogSection() {
                     className="mb-20 flex flex-col items-center justify-center text-center space-y-4"
                 >
                     <div className="w-10 h-1 bg-sf-blue rounded-full" />
-                    <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">
+                    <h2 className="text-4xl md:text-5xl font-normal text-white tracking-tight">
                         Selected Works
                     </h2>
                     <p className="text-gray-400 font-mono text-sm tracking-wide">
