@@ -65,10 +65,10 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                     {/* Grid Pattern Overlay */}
                     <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
-                    {/* Project Title Overlay — 밝은 썸네일에서도 읽히도록 어두운 판 위에 얹는다 */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6">
+                    {/* Project Title Overlay — 밝은 썸네일에서도 읽히도록 어두운 판 위에, 이미지 상단에 얹는다 */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-start pt-12 sm:pt-14 px-4 sm:px-6">
                         <motion.div
-                            className="flex flex-col items-center bg-black/55 backdrop-blur-[3px] rounded-2xl px-6 py-4 max-w-full"
+                            className="flex flex-col items-center bg-black/55 rounded-2xl px-6 py-4 max-w-full"
                             whileHover={{ scale: 1.02 }}
                         >
                             <div className="text-white text-xl sm:text-2xl font-light tracking-tight text-center [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
