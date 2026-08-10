@@ -9,24 +9,21 @@ const PROJECTS: PortfolioProject[] = [
         titleKo: "프로토팡 (기획서 → 플레이 가능한 프로토타입 생성기)",
         category: "AI",
         role: "Product Engineer (기획 · 설계 · 구현 · QA 전담)",
-        tech: ["React 18", "TypeScript", "Vite", "BYO LLM (Gemini·Claude·GPT·Ollama)", "JSON Schema 강제 출력", "XML DSL 런타임", "Monte-Carlo 1만회 시뮬레이션", "Sandboxed iframe", "Cloudflare Pages"],
-        description: "기획서를 넣으면 눌러볼 수 있는 프로토타입이 나오고, 기획서에 적힌 숫자가 진짜 그렇게 되는지 1만 번 돌려 대조합니다. 틀리면 \'기획서와 다른 곳이 1건 있습니다\'라고 말해주고, 그 자리에서 고쳐 다시 잴 수 있습니다.\n\n모델은 사용자 것을 씁니다 — API 키든 본인 PC 의 로컬 모델이든. 키는 브라우저 밖으로 나가지 않습니다.",
+        tech: ["React 18", "TypeScript", "Vite", "BYO LLM (Gemini·Claude·GPT·Ollama)", "생성-검증-자동수리 루프", "Sandboxed iframe", "pptxgenjs", "Cloudflare Pages Functions + KV"],
+        description: "기획서를 넣거나 한 줄로 말하면, 실제로 플레이되는 게임이 나옵니다. 보여주기 전에 숨은 창에서 먼저 돌려보고, 안 돌면 오류를 모델에게 돌려줘 고쳐 받습니다.\n\n결과는 슬라이더로 만지고, 말 한 줄로 고치고, PPT·HTML 로 그대로 가져갑니다. 키 없이 12시간에 3번 무료 체험 — 키는 서버 비밀값으로만 존재합니다.",
         participation: 100,
         gradient: "bg-gradient-to-br from-fuchsia-900/80 via-violet-800/60 to-indigo-900/80",
         thumbnail: "/portfolio/protopang_00_thumb.png",
         images: [
-            "/portfolio/protopang_slider.gif",
-            "/portfolio/protopang_02_match3.png",
-            "/portfolio/protopang_01_landing.png",
-            "/portfolio/protopang_03_assembly.png",
-            "/portfolio/protopang_04_verify.png",
-            "/portfolio/protopang_05_handoff.png"
+            "/portfolio/protopang_11_docgame.png",
+            "/portfolio/protopang_12_sliders.png",
+            "/portfolio/protopang_10_landing.png"
         ],
         stats: [
-            { value: "204", label: "회귀 테스트" },
-            { value: "59/59", label: "라이브 전수 QA" },
-            { value: "1만 회", label: "판당 시뮬레이션" },
-            { value: "0초", label: "수치 수정 반영 시간" },
+            { value: "317", label: "회귀 테스트" },
+            { value: "19/19", label: "라이브 전수 QA" },
+            { value: "40~90초", label: "한 줄 → 게임" },
+            { value: "4종", label: "내보내기 (pptx·md·html·zip)" },
         ],
         links: [
             { label: "라이브 데모 열기", url: "https://protopang.pages.dev", primary: true },
@@ -35,15 +32,15 @@ const PROJECTS: PortfolioProject[] = [
         highlights: [
             {
                 label: "핵심 한 줄",
-                body: "AI 가 만든 게 아니라, AI 가 틀릴 수 없게 만든 구조입니다.\n\n모델은 값만 채우고 문법·실행 코드는 전부 제가 쓴 고정 런타임입니다. 그래서 문법 오류로 죽거나 무한 루프에 빠지는 일이 구조적으로 불가능합니다.",
+                body: "AI 를 가뒀다가 실패했고, 풀어주고 검증으로 감쌌습니다.\n\n처음엔 모델이 틀릴 수 없게 부품 조립으로 가뒀습니다 — 어떤 기획서를 넣어도 버튼과 숫자판만 나왔습니다. 뒤집어서 모델이 게임을 통째로 쓰게 하고, 저는 먼저 돌려보기 → 실패 문구를 돌려줘 자동 수리(최대 2회) → 리소스·수치·회수를 얹었습니다.",
             },
             {
-                label: "실제로 잡아낸 것",
-                body: "\'30일 안에 20레벨\' → 돌려보니 57일.\n\'25수 안에 별 3개(5,000점)\' → 실측 1,700점.\n\n기획서가 틀렸다고 말해주는 도구입니다. 화면에서 숫자 하나 고치면 0초에 다시 재서 ✅ 로 바뀝니다.",
+                label: "모델이 못 하는 것만 내가",
+                body: "일관된 파스텔 룩 — 그림 12종을 쥐여 주고 한 줄(PP_DRAW)로 그리게 강제.\n수치는 코드 밖으로 빼서 슬라이더로, 수정은 \'적을 더 느리게\' 한 줄로.\n결과는 pptx·md·html·zip 으로 회수 — 바꾼 수치가 기획서에 그대로 실립니다.",
             },
             {
-                label: "만들다 배운 것",
-                body: "생성이 909초까지 늘어진 원인은 호출 수가 아니라 같은 기획서를 매번 통째로 다시 읽힌 것 — 단계별로 줄여 400초.\n\n\'눌러도 반응 없음\'의 범인은 앱이 아니라 리렌더에 끊긴 내 테스트 코드였습니다. 실패가 나면 어느 쪽 탓인지 먼저 증명하고 고칩니다.",
+                label: "못 하면 못 한다고 화면이 말합니다",
+                body: "\'두 번 고쳐도 안 돌아갔습니다\', \'무료 체험을 다 썼습니다 + 설정 열기\', \'말씀이 짧아 대부분 지어냈습니다\'.\n\n실패를 숨기는 순간 사용자도 나도 원인을 못 찾는다는 걸 이 프로젝트에서 몸으로 배웠습니다 — 33초 먹통의 범인이 침묵하던 내 코드였습니다.",
             },
             {
                 label: "품질",
