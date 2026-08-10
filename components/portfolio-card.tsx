@@ -59,14 +59,10 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                             className={`absolute inset-0 ${project.gradient} opacity-80 group-hover:opacity-100 transition-opacity duration-500`}
                         />
                     )}
-                    {/* Dark Overlay for readability */}
-                    <div className="absolute inset-0 bg-black/45 group-hover:bg-black/35 transition-colors duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/25" />
-                    {/* Grid Pattern Overlay */}
-                    <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+                    {/* 이미지 전체 딤은 없앤다 — 가독성은 타이틀 뒤 어두운 판이 담당 (2026-08-10 디렉터 지시) */}
 
-                    {/* Project Title Overlay — 밝은 썸네일에서도 읽히도록 어두운 판 위에, 이미지 상단에 얹는다 */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-start pt-12 sm:pt-14 px-4 sm:px-6">
+                    {/* Project Title Overlay — 이미지 맨 위에 얹는다 */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-start pt-3 sm:pt-4 px-4 sm:px-6">
                         <motion.div
                             className="flex flex-col items-center bg-black/55 rounded-2xl px-6 py-4 max-w-full"
                             whileHover={{ scale: 1.02 }}
@@ -74,14 +70,14 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                             <div className="text-white text-xl sm:text-2xl font-light tracking-tight text-center [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
                                 {project.title}
                             </div>
-                            <div className="text-white/80 text-xs font-mono mt-2 tracking-widest text-center [text-shadow:0_1px_8px_rgba(0,0,0,0.9)]">
+                            <div className="text-white/80 text-xs font-mono mt-2 tracking-widest text-center break-keep [text-shadow:0_1px_8px_rgba(0,0,0,0.9)]">
                                 {project.titleKo}
                             </div>
                         </motion.div>
                     </div>
 
-                    {/* Category Badge */}
-                    <div className="absolute top-4 left-4">
+                    {/* Category Badge — 타이틀 판이 맨 위로 올라가며 겹치지 않게 좌하단으로 */}
+                    <div className="absolute bottom-4 left-4">
                         <span className={`text-[10px] px-2.5 py-1 rounded-full font-mono tracking-widest border ${categoryColors[project.category]}`}>
                             {categoryLabels[project.category]}
                         </span>
