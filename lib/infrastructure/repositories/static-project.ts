@@ -9,7 +9,7 @@ const PROJECTS: PortfolioProject[] = [
         titleKo: "프로토팡 (기획서 → 플레이 가능한 프로토타입 생성기)",
         category: "AI",
         role: "Product Engineer (기획 · 설계 · 구현 · QA 전담)",
-        tech: ["React 18", "TypeScript", "Vite", "Gemini API", "Anthropic SDK", "OpenAI API", "Ollama", "pptxgenjs", "mammoth", "pdf.js", "SheetJS", "JSZip", "Cloudflare Pages Functions", "Cloudflare KV"],
+        tech: ["React", "TypeScript", "Vite", "Gemini·Claude·GPT·Ollama API", "pptxgenjs", "Cloudflare Pages Functions", "Cloudflare KV"],
         description: "기획서를 넣거나 한 줄로 말하면, 실제로 플레이되는 게임이 나옵니다.\n\n보여주기 전에 숨은 창에서 몰래 먼저 돌려보고, 안 돌면 오류를 AI 에게 돌려줘 고쳐 받습니다. 결과는 슬라이더로 만지고 말 한 줄로 고쳐서, PPT·HTML 로 그대로 가져갑니다. 키 없이 12시간 3번 무료 체험.",
         participation: 100,
         gradient: "bg-gradient-to-br from-fuchsia-900/80 via-violet-800/60 to-indigo-900/80",
@@ -55,10 +55,10 @@ const PROJECTS: PortfolioProject[] = [
         description: "n8n, Supabase, Docker를 활용한 백엔드 데이터 수집 및 자동화 파이프라인을 구축했습니다. nomic-embed-text 모델 기반 벡터 검색(Vector Search)을 도입하여, 사용자 자연어 의도에 맞춘 최적의 스팟 및 경유지 추천 로직을 추가했습니다.(추가 청소 SNS 인증 및 포인트 쇼핑 구축까지) 프론트엔드 예외 처리 및 Naver Map 렌더링 최적화 등 풀스택 트러블슈팅을 주도적으로 수행하였습니다. 전국 8,400+ 낚시·캠핑 명소 AI 검색 및 자연어 경로 추천 기능과 청소 인증을 통한 ESG 포인트 시스템을 제공합니다.\n(공공데이터 여러개 수집 > 데이터에 추가 상세 데이터 검색 > 데이터 표준화 > DB 등록)\n(데이터 검색 모델 > 검색 데이터 표준화 > 추가 상세 데이터 검색 > DB 등록)",
         participation: 100,
         gradient: "bg-gradient-to-br from-cyan-900/80 via-blue-800/60 to-indigo-900/80",
-        thumbnail: "/portfolio/jubup_main_stitched.png",
+        thumbnail: "/portfolio/jubup_main_stitched_v2.png",
         images: [
-            "/portfolio/jubup_main_stitched.png",
-            "/portfolio/jubup_characters.png",
+            "/portfolio/jubup_main_stitched_v2.png",
+            "/portfolio/jubup_characters.mp4",
             "/portfolio/jubup_workflow.webp",
             "/portfolio/jubup_db.webp",
             "/portfolio/jubup_docker.png"
@@ -74,8 +74,8 @@ const PROJECTS: PortfolioProject[] = [
         description: "AI 는 처음 한 번만 씁니다 — 그 뒤로는 토큰 0 으로 돌아가는 자동화 환경입니다.\n\n기획서를 AI 가 XML 로 바꿔 두면, 미리 만들어 둔 파이썬 워커가 토큰 없이 컴포넌트를 조립합니다. 워커가 모이면 파이프라인, 파이프라인을 패키징하면 앱이 됩니다.",
         participation: 100,
         gradient: "bg-gradient-to-br from-violet-900/80 via-purple-800/60 to-blue-900/80",
-        thumbnail: "/portfolio/antigravity_framework.jpg",
-        images: ["/portfolio/antigravity_framework.jpg"],
+        thumbnail: "/portfolio/zerotoken_thumb.png",
+        images: ["/portfolio/zerotoken_thumb.png", "/portfolio/antigravity_framework.jpg"],
         stats: [
             { value: "① 문서", label: "기획서 · docx · xlsx · pptx" },
             { value: "② XML 변환", label: "AI 는 여기 한 번만" },
