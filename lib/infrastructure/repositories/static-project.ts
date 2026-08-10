@@ -10,7 +10,7 @@ const PROJECTS: PortfolioProject[] = [
         category: "AI",
         role: "Product Engineer (기획 · 설계 · 구현 · QA 전담)",
         tech: ["React 18", "TypeScript", "Vite", "BYO LLM (Gemini·Claude·GPT·Ollama)", "생성-검증-자동수리 루프", "Sandboxed iframe", "pptxgenjs", "Cloudflare Pages Functions + KV"],
-        description: "기획서를 넣거나 한 줄로 말하면, 실제로 플레이되는 게임이 나옵니다. 보여주기 전에 숨은 창에서 먼저 돌려보고, 안 돌면 오류를 모델에게 돌려줘 고쳐 받습니다.\n\n결과는 슬라이더로 만지고, 말 한 줄로 고치고, PPT·HTML 로 그대로 가져갑니다. 키 없이 12시간에 3번 무료 체험 — 키는 서버 비밀값으로만 존재합니다.",
+        description: "기획서를 넣거나 한 줄로 말하면, 실제로 플레이되는 게임이 나옵니다. 보여주기 전에 숨은 창에서 먼저 돌려보고, 안 돌면 오류를 모델에게 돌려줘 고쳐 받습니다.\n\n결과는 슬라이더로 만지고, 말 한 줄로 고치고, PPT·HTML 로 그대로 가져갑니다. 키 없이 12시간에 3번 무료 체험 — 키는 서버 비밀값으로만 존재합니다.\n\n로컬 작은 모델이 게임 코드를 못 쓰면 XML 부품 조립으로 폴백하고, 그 사실을 화면에 그대로 적습니다.",
         participation: 100,
         gradient: "bg-gradient-to-br from-fuchsia-900/80 via-violet-800/60 to-indigo-900/80",
         thumbnail: "/portfolio/protopang_00_thumb.png",
@@ -20,14 +20,15 @@ const PROJECTS: PortfolioProject[] = [
             "/portfolio/protopang_10_landing.png"
         ],
         stats: [
-            { value: "317", label: "회귀 테스트" },
-            { value: "19/19", label: "라이브 전수 QA" },
-            { value: "40~90초", label: "한 줄 → 게임" },
-            { value: "4종", label: "내보내기 (pptx·md·html·zip)" },
+            { value: "① 넣기", label: "PPT·워드·한글·PDF 또는 대화 한 줄" },
+            { value: "② 정리", label: "문장 단위 노트 — 앞말이 안 사라짐" },
+            { value: "③ 생성", label: "AI가 게임을 통째로 (계약 6줄)" },
+            { value: "④ 검사·수리", label: "먼저 돌려보고 자동 수리 ≤2회" },
+            { value: "⑤ 결과", label: "슬라이더 · 말 한 줄로 고치기" },
+            { value: "⑥ 내보내기", label: "pptx · md · html(실행) · zip" },
         ],
         links: [
             { label: "라이브 데모 열기", url: "https://protopang.pages.dev", primary: true },
-            { label: "매치3 프로토타입 바로 보기", url: "https://protopang.pages.dev/#/build" },
         ],
         highlights: [
             {
