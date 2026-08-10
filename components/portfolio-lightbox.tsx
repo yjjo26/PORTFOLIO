@@ -113,14 +113,15 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                 ) : (
                                     <div className={`absolute inset-0 ${project.gradient}`} />
                                 )}
-                                <div className="absolute inset-0 bg-black/40" />
+                                <div className="absolute inset-0 bg-black/50" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
                                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
                                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
                                     <motion.h2
                                         initial={{ y: 20, opacity: 0 }}
                                         animate={{ y: 0, opacity: 1 }}
                                         transition={{ delay: 0.2 }}
-                                        className="text-2xl sm:text-4xl md:text-6xl font-light text-white tracking-tight text-center"
+                                        className="text-2xl sm:text-4xl md:text-6xl font-light text-white tracking-tight text-center [text-shadow:0_2px_16px_rgba(0,0,0,0.85)]"
                                     >
                                         {project.title}
                                     </motion.h2>
@@ -128,7 +129,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                         initial={{ y: 10, opacity: 0 }}
                                         animate={{ y: 0, opacity: 1 }}
                                         transition={{ delay: 0.3 }}
-                                        className="text-white/50 font-mono text-xs sm:text-sm mt-2 sm:mt-3 tracking-widest text-center"
+                                        className="text-white/80 font-mono text-xs sm:text-sm mt-2 sm:mt-3 tracking-widest text-center [text-shadow:0_1px_10px_rgba(0,0,0,0.9)]"
                                     >
                                         {project.titleKo}
                                     </motion.p>
