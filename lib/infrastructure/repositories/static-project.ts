@@ -74,8 +74,8 @@ const PROJECTS: PortfolioProject[] = [
         description: "AI 는 처음 한 번만 씁니다 — 그 뒤로는 토큰 0 으로 돌아가는 자동화 환경입니다.\n\n기획서를 AI 가 XML 로 바꿔 두면, 미리 만들어 둔 파이썬 워커가 토큰 없이 컴포넌트를 조립합니다. 워커가 모이면 파이프라인, 파이프라인을 패키징하면 앱이 됩니다.",
         participation: 100,
         gradient: "bg-gradient-to-br from-violet-900/80 via-purple-800/60 to-blue-900/80",
-        thumbnail: "/portfolio/zerotoken_thumb.png",
-        images: ["/portfolio/zerotoken_thumb.png", "/portfolio/antigravity_framework.jpg"],
+        thumbnail: "/portfolio/zerotoken_thumb2.png",
+        images: ["/portfolio/zerotoken_thumb2.png", "/portfolio/antigravity_framework.jpg"],
         stats: [
             { value: "① 문서", label: "기획서 · docx · xlsx · pptx" },
             { value: "② XML 변환", label: "AI 는 여기 한 번만" },
