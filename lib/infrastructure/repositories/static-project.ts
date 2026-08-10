@@ -9,7 +9,7 @@ const PROJECTS: PortfolioProject[] = [
         titleKo: "프로토팡 (기획서 → 플레이 가능한 프로토타입 생성기)",
         category: "AI",
         role: "Product Engineer (기획 · 설계 · 구현 · QA 전담)",
-        tech: ["React 18", "TypeScript", "Vite", "BYO LLM (Gemini·Claude·GPT·Ollama)", "생성-검증-자동수리 루프", "Sandboxed iframe", "pptxgenjs", "Cloudflare Pages Functions + KV"],
+        tech: ["React 18", "TypeScript", "Vite", "Gemini API", "Anthropic SDK", "OpenAI API", "Ollama", "pptxgenjs", "mammoth", "pdf.js", "SheetJS", "JSZip", "Cloudflare Pages Functions", "Cloudflare KV"],
         description: "기획서를 넣거나 한 줄로 말하면, 실제로 플레이되는 게임이 나옵니다.\n\n보여주기 전에 숨은 창에서 몰래 먼저 돌려보고, 안 돌면 오류를 AI 에게 돌려줘 고쳐 받습니다. 결과는 슬라이더로 만지고 말 한 줄로 고쳐서, PPT·HTML 로 그대로 가져갑니다. 키 없이 12시간 3번 무료 체험.",
         participation: 100,
         gradient: "bg-gradient-to-br from-fuchsia-900/80 via-violet-800/60 to-indigo-900/80",
