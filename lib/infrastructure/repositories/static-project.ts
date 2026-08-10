@@ -66,16 +66,36 @@ const PROJECTS: PortfolioProject[] = [
     },
     {
         id: "P-002",
-        title: "Anti-Gravity Framework",
-        titleKo: "안티그래비티 프레임워크 (AI 자율화 시스템)",
+        title: "Zero-Token Pipeline",
+        titleKo: "제로 토큰 자동화 (문서 → XML → 파이썬 워커 조립)",
         category: "AI",
         role: "AI Product Engineer",
-        tech: ["Parallel Agent Architecture", "Prompt Engineering", "Workflow Automation"],
-        description: "메인(종합 지시/리뷰) ➔ 서브1(지식 조달) ➔ 서브2(기획) ➔ 서브3(빌드)로 이어지는 4단계 병렬 에이전트 아키텍처를 설계하여 무한 루프 자동화 시스템을 구현했습니다. 고도화된 프롬프트 엔지니어링을 적용하여 AI 기반 코드 빌드 워크플로우를 자율화하고 프로덕트 개발 속도를 극대화했습니다.",
+        tech: ["Python", "XML (OOXML)", "Markdown", "Claude API", "Agent Skills"],
+        description: "AI 는 처음 한 번만 씁니다 — 그 뒤로는 토큰 0 으로 돌아가는 자동화 환경입니다.\n\n기획서를 AI 가 XML 로 바꿔 두면, 미리 만들어 둔 파이썬 워커가 토큰 없이 컴포넌트를 조립합니다. 워커가 모이면 파이프라인, 파이프라인을 패키징하면 앱이 됩니다.",
         participation: 100,
         gradient: "bg-gradient-to-br from-violet-900/80 via-purple-800/60 to-blue-900/80",
         thumbnail: "/portfolio/antigravity_framework.jpg",
         images: ["/portfolio/antigravity_framework.jpg"],
+        stats: [
+            { value: "① 문서", label: "기획서 · docx · xlsx · pptx" },
+            { value: "② XML 변환", label: "AI 는 여기 한 번만" },
+            { value: "③ 워커 조립", label: "파이썬 컴포넌트 — 토큰 0" },
+            { value: "④ 회수", label: "문서 재파싱 · 패키징하면 앱" },
+        ],
+        highlights: [
+            {
+                label: "토큰 0 원칙",
+                body: "조립을 AI 가 하면 토큰 낭비, 자동화가 하면 토큰 0 — AI 는 워커를 처음 만들 때 딱 한 번만 씁니다.",
+            },
+            {
+                label: "왜 XML 인가",
+                body: "docx·xlsx·pptx 는 전부 XML — 기획서·데이터 구조가 한 형식으로 오가고, 조립 결과를 다시 문서로 파싱할 수 있습니다.",
+            },
+            {
+                label: "사람이 읽는 구조",
+                body: "마크다운 컨벤션과 SSOT 로 워커 구조를 확정 — 유지보수는 AI 없이 사람이 직접 합니다.",
+            },
+        ],
     },
 
     // === 3. ComfyUI BMW Contest ===
