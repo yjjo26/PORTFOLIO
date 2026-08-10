@@ -60,21 +60,24 @@ export function PortfolioCard({ project, index, onClick }: PortfolioCardProps) {
                         />
                     )}
                     {/* Dark Overlay for readability */}
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-black/45 group-hover:bg-black/35 transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/25" />
                     {/* Grid Pattern Overlay */}
                     <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
-                    {/* Project Title Overlay */}
+                    {/* Project Title Overlay — 밝은 썸네일에서도 읽히도록 어두운 판 위에 얹는다 */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6">
                         <motion.div
-                            className="text-white/90 text-xl sm:text-2xl font-light tracking-tight text-center"
+                            className="flex flex-col items-center bg-black/55 backdrop-blur-[3px] rounded-2xl px-6 py-4 max-w-full"
                             whileHover={{ scale: 1.02 }}
                         >
-                            {project.title}
+                            <div className="text-white text-xl sm:text-2xl font-light tracking-tight text-center [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
+                                {project.title}
+                            </div>
+                            <div className="text-white/80 text-xs font-mono mt-2 tracking-widest text-center [text-shadow:0_1px_8px_rgba(0,0,0,0.9)]">
+                                {project.titleKo}
+                            </div>
                         </motion.div>
-                        <div className="text-white/40 text-xs font-mono mt-2 tracking-widest">
-                            {project.titleKo}
-                        </div>
                     </div>
 
                     {/* Category Badge */}
