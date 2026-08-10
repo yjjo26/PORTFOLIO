@@ -146,7 +146,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                             <div className="p-4 sm:p-8 md:p-12 space-y-6 sm:space-y-8">
                                 {/* 바로가기 — 링크가 있는 프로젝트만. 설명을 읽기 전에 직접 만져볼 수 있게 맨 위에 둔다 */}
                                 {project.links && project.links.length > 0 && (
-                                    <div className="flex flex-wrap gap-2 sm:gap-3">
+                                    <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                                         {project.links.map((l, i) => (
                                             <a
                                                 key={i}
@@ -155,7 +155,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                                 rel="noreferrer noopener"
                                                 className={
                                                     l.primary
-                                                        ? "inline-flex items-center gap-2 rounded-xl bg-sf-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-400"
+                                                        ? "inline-flex items-center gap-2 rounded-xl bg-sf-blue px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-400"
                                                         : "inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm text-gray-300 transition-colors hover:border-sf-blue/40 hover:text-white"
                                                 }
                                             >
@@ -168,16 +168,16 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
 
                                 {/* 숫자 배지 — 정리 글을 안 읽어도 이건 눈에 들어온다 */}
                                 {project.stats && project.stats.length > 0 && (
-                                    <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4">
+                                    <div className="mx-auto flex w-full max-w-xl flex-col gap-2">
                                         {project.stats.map((s, i) => (
                                             <div
                                                 key={i}
-                                                className="rounded-xl border border-white/5 bg-white/[0.03] px-4 py-3 text-center"
+                                                className="flex items-center gap-4 rounded-xl border border-white/5 bg-white/[0.03] px-5 py-3"
                                             >
-                                                <div className="font-mono text-xl font-bold text-sf-blue sm:text-2xl">
+                                                <div className="w-32 shrink-0 font-mono text-base font-bold text-sf-blue sm:text-lg">
                                                     {s.value}
                                                 </div>
-                                                <div className="mt-1 text-[11px] leading-tight text-gray-400">
+                                                <div className="text-[13px] leading-relaxed text-gray-200">
                                                     {s.label}
                                                 </div>
                                             </div>
@@ -189,7 +189,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                                     <div className="space-y-1">
                                         <div className="text-[10px] font-mono text-gray-500 tracking-widest">ROLE</div>
-                                        <div className="text-white text-sm">{project.role}</div>
+                                        <div className="text-white text-[14px]">{project.role}</div>
                                     </div>
                                     <div className="space-y-1">
                                         <div className="text-[10px] font-mono text-gray-500 tracking-widest">CATEGORY</div>
@@ -217,7 +217,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                 {/* Description */}
                                 <div>
                                     <div className="text-[10px] font-mono text-gray-500 tracking-widest mb-3">DESCRIPTION</div>
-                                    <p className="text-gray-300 leading-relaxed text-sm font-sans whitespace-pre-line">
+                                    <p className="text-gray-200 leading-relaxed text-[15px] font-sans whitespace-pre-line">
                                         {project.description}
                                     </p>
                                 </div>
@@ -233,7 +233,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                                 <div className="mb-2 text-xs font-semibold tracking-wide text-sf-blue">
                                                     {h.label}
                                                 </div>
-                                                <p className="whitespace-pre-line text-sm leading-relaxed text-gray-300">
+                                                <p className="whitespace-pre-line text-[14px] leading-relaxed text-gray-200">
                                                     {h.body}
                                                 </p>
                                             </div>
@@ -248,7 +248,7 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                         {project.tech.map((t, i) => (
                                             <span
                                                 key={i}
-                                                className="text-xs text-gray-400 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 font-mono hover:border-sf-blue/30 transition-colors"
+                                                className="text-[13px] text-gray-300 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 font-mono hover:border-sf-blue/30 transition-colors"
                                             >
                                                 {t}
                                             </span>
