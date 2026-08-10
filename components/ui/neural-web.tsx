@@ -209,7 +209,7 @@ export function NeuralWebBackground() {
         <motion.canvas
             ref={canvasRef}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 0.35 }}
             transition={{ duration: 1.5 }}
             className="fixed inset-0 z-0 pointer-events-none mix-blend-screen"
         />
