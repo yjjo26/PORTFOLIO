@@ -29,6 +29,12 @@ export default function RootLayout({
         className={`${orbitron.variable} ${rajdhani.variable} antialiased bg-[#050505] text-white`}
       >
         {children}
+        {/* Cloudflare Web Analytics — 방문 집계 (토큰은 공개값) */}
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "74165ed2f2fb46e18a2bd760c24226f9"}'
+        />
       </body>
     </html>
   );
