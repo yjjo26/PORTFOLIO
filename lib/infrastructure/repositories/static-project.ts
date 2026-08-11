@@ -67,11 +67,11 @@ const PROJECTS: PortfolioProject[] = [
     {
         id: "P-002",
         title: "Zero-Token Pipeline",
-        titleKo: "제로 토큰 자동화 (문서 → XML → 파이썬 워커 조립)",
+        titleKo: "제로 토큰 자동화 (문서 → XML → 워커 조립 · RAG 지식층)",
         category: "AI",
         role: "AI Product Engineer",
-        tech: ["Python", "XML", "Markdown", "Claude API", "Agent Skills"],
-        description: "AI 는 처음 한 번만 씁니다 — 그 뒤로는 토큰 0 으로 돌아가는 자동화 환경입니다.\n\n기획서를 AI 가 XML 로 바꿔 두면, 미리 만들어 둔 파이썬 워커가 토큰 없이 컴포넌트를 조립합니다. 워커가 모이면 파이프라인, 파이프라인을 패키징하면 앱이 됩니다.",
+        tech: ["Python", "XML", "Markdown", "Claude API", "Agent Skills", "pgvector", "bge-m3"],
+        description: "AI 는 처음 한 번만 씁니다 — 그 뒤로는 토큰 0 으로 돌아가는 자동화 환경입니다.\n\n기획서를 AI 가 XML 로 바꿔 두면, 미리 만들어 둔 파이썬 워커가 토큰 없이 컴포넌트를 조립합니다. 같은 원리를 지식에도 적용해, 매번 다시 검색해 답을 재생성하는 대신 한 번 정리한 지식층(RAG)을 위키처럼 유지보수하며 재사용합니다.",
         participation: 100,
         gradient: "bg-gradient-to-br from-violet-900/80 via-purple-800/60 to-blue-900/80",
         thumbnail: "/portfolio/zerotoken_blur.jpg",
@@ -80,7 +80,8 @@ const PROJECTS: PortfolioProject[] = [
             { value: "① 문서", label: "기획서 · docx · xlsx · pptx" },
             { value: "② XML 변환", label: "AI 는 여기 한 번만" },
             { value: "③ 워커 조립", label: "파이썬 컴포넌트 — 토큰 0" },
-            { value: "④ 회수", label: "문서 재파싱 · 패키징하면 앱" },
+            { value: "④ 지식층", label: "검색·증강(RAG) → 위키로 재사용" },
+            { value: "⑤ 회수", label: "문서 재파싱 · 패키징하면 앱" },
         ],
         highlights: [
             {
@@ -88,12 +89,20 @@ const PROJECTS: PortfolioProject[] = [
                 body: "조립을 AI 가 하면 토큰 낭비, 자동화가 하면 토큰 0 — AI 는 워커를 처음 만들 때 딱 한 번만 씁니다.",
             },
             {
-                label: "왜 XML 인가",
-                body: "docx·xlsx·pptx 는 전부 XML — 기획서·데이터 구조가 한 형식으로 오가고, 조립 결과를 다시 문서로 파싱할 수 있습니다.",
+                label: "검색은 벡터만으로 안 됩니다",
+                body: "벡터 검색은 안 물어본 것도 비슷하다며 데려옵니다. 그래서 자연어 질의를 어종·지역·활동으로 먼저 뜯어 필터(sparse)로 걸고, 남은 의미만 임베딩(dense)으로 찾습니다 — 줍업 스팟 검색이 이 구조입니다.",
+            },
+            {
+                label: "임베딩은 모델이 아니라 공간을 고르는 일",
+                body: "모델을 바꾸면 차원이 달라져 기존 벡터와 섞이지 않습니다. Gemini 768 → bge-m3 1024 로 옮기며 DB 컬럼·RPC·질의 경로를 같은 공간으로 맞추고 6,425건을 전량 재임베딩했습니다.",
+            },
+            {
+                label: "매번 다시 찾지 않는다 — LLM Wiki",
+                body: "원자료 → 정리된 위키 → 스키마 3계층으로 두고, 새 사실은 그 자리에서 반영(ingest)·답은 위키에서 먼저(query)·모순은 즉시 수리(lint). 재도출을 줄이는 것이 곧 토큰을 줄이는 것입니다.",
             },
             {
                 label: "사람이 읽는 구조",
-                body: "마크다운 컨벤션과 SSOT 로 워커 구조를 확정 — 유지보수는 AI 없이 사람이 직접 합니다.",
+                body: "마크다운 컨벤션과 SSOT 로 워커·지식 구조를 확정 — 유지보수는 AI 없이 사람이 직접 합니다.",
             },
         ],
     },
