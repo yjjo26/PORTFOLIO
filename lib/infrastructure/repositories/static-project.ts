@@ -20,12 +20,12 @@ const PROJECTS: PortfolioProject[] = [
             "/portfolio/protopang_10_landing.png"
         ],
         stats: [
-            { value: "① 넣기", label: "기획서 파일 또는 대화 한 줄" },
-            { value: "② 정리", label: "문장 단위로 쪼개 노트로" },
-            { value: "③ 생성", label: "AI 가 게임을 통째로" },
-            { value: "④ 검사·수리", label: "먼저 돌려보고 자동 수리" },
-            { value: "⑤ 조정", label: "슬라이더 · 말 한 줄로" },
-            { value: "⑥ 내보내기", label: "PPT · 실행 파일 · zip" },
+            { value: "① 넣기", label: "기획서 · 대화" },
+            { value: "② 정리", label: "문장 단위 노트" },
+            { value: "③ 생성", label: "AI 가 통째로" },
+            { value: "④ 검사·수리", label: "돌려보고 수리" },
+            { value: "⑤ 조정", label: "슬라이더 · 한 줄" },
+            { value: "⑥ 내보내기", label: "PPT · 실행 · zip" },
         ],
         links: [
             { label: "라이브 데모 열기", url: "https://protopang.pages.dev", primary: true },
@@ -66,8 +66,8 @@ const PROJECTS: PortfolioProject[] = [
     },
     {
         id: "P-002",
-        title: "Zero-Token Pipeline",
-        titleKo: "제로 토큰 자동화 (문서 → XML → 워커 조립 · RAG 지식층)",
+        title: "Zero-Token RAG Pipeline",
+        titleKo: "제로 토큰 자동화 · RAG 지식층 (문서 → XML → 워커 조립)",
         category: "AI",
         role: "AI Product Engineer",
         tech: ["Python", "XML", "Markdown", "Claude API", "Agent Skills", "pgvector", "bge-m3"],
@@ -77,11 +77,11 @@ const PROJECTS: PortfolioProject[] = [
         thumbnail: "/portfolio/zerotoken_blur.jpg",
         images: ["/portfolio/antigravity_framework.jpg"],
         stats: [
-            { value: "① 문서", label: "워드 · 엑셀 · PPT 기획서" },
-            { value: "② XML 변환", label: "AI 는 여기 한 번만" },
-            { value: "③ 워커 조립", label: "파이썬 컴포넌트 · 토큰 0" },
-            { value: "④ 지식층", label: "검색·증강(RAG) 재사용" },
-            { value: "⑤ 회수", label: "문서 · 앱으로 패키징" },
+            { value: "① 문서", label: "워드 · 엑셀 · PPT" },
+            { value: "② XML 변환", label: "AI 는 한 번만" },
+            { value: "③ 워커 조립", label: "파이썬 · 토큰 0" },
+            { value: "④ 지식층", label: "RAG 재사용" },
+            { value: "⑤ 회수", label: "문서 · 앱 패키징" },
         ],
         highlights: [
             {

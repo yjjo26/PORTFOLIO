@@ -170,8 +170,9 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                 {/* 숫자 배지 — 정리 글을 안 읽어도 이건 눈에 들어온다 */}
                                 {project.stats && project.stats.length > 0 && (
                                     <div
-                                        className="grid gap-2.5"
-                                        style={{ gridTemplateColumns: `repeat(${Math.min(project.stats.length, 6)}, minmax(0, 1fr))` }}
+                                        // 좁은 화면에서는 2열로 접는다 — 6열 고정이면 타일이 좁아 한 줄 설명이 삐져나온다
+                                        className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:[grid-template-columns:repeat(var(--pp-cols),minmax(0,1fr))]"
+                                        style={{ ["--pp-cols" as string]: Math.min(project.stats.length, 6) }}
                                     >
                                         {project.stats.map((s, i) => (
                                             <div
@@ -181,7 +182,8 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                                 <div className="font-mono text-sm font-bold text-sf-blue sm:text-base whitespace-nowrap">
                                                     {s.value}
                                                 </div>
-                                                <div className="mt-2 text-[13px] font-medium leading-relaxed text-gray-100 break-keep">
+                                                {/* 서브 설명은 한 줄 고정 — 두 줄로 접히면 타일 높이가 들쭉날쭉해진다 */}
+                                                <div className="mt-2 text-[12px] font-medium leading-normal text-gray-100 whitespace-nowrap">
                                                     {s.label}
                                                 </div>
                                             </div>
