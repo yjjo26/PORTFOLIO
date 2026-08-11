@@ -20,12 +20,12 @@ const PROJECTS: PortfolioProject[] = [
             "/portfolio/protopang_10_landing.png"
         ],
         stats: [
-            { value: "① 넣기", label: "PPT·워드·한글·PDF 또는 대화 한 줄" },
-            { value: "② 정리", label: "문장 단위 노트 — 앞말이 안 사라짐" },
-            { value: "③ 생성", label: "AI가 게임을 통째로 (계약 6줄)" },
-            { value: "④ 검사·수리", label: "먼저 돌려보고 자동 수리 ≤2회" },
-            { value: "⑤ 결과", label: "슬라이더 · 말 한 줄로 고치기" },
-            { value: "⑥ 내보내기", label: "pptx · md · html(실행) · zip" },
+            { value: "① 넣기", label: "기획서 파일 또는 대화 한 줄" },
+            { value: "② 정리", label: "문장 단위로 쪼개 노트로" },
+            { value: "③ 생성", label: "AI 가 게임을 통째로" },
+            { value: "④ 검사·수리", label: "먼저 돌려보고 자동 수리" },
+            { value: "⑤ 조정", label: "슬라이더 · 말 한 줄로" },
+            { value: "⑥ 내보내기", label: "PPT · 실행 파일 · zip" },
         ],
         links: [
             { label: "라이브 데모 열기", url: "https://protopang.pages.dev", primary: true },
@@ -77,11 +77,11 @@ const PROJECTS: PortfolioProject[] = [
         thumbnail: "/portfolio/zerotoken_blur.jpg",
         images: ["/portfolio/antigravity_framework.jpg"],
         stats: [
-            { value: "① 문서", label: "기획서 · docx · xlsx · pptx" },
+            { value: "① 문서", label: "워드 · 엑셀 · PPT 기획서" },
             { value: "② XML 변환", label: "AI 는 여기 한 번만" },
-            { value: "③ 워커 조립", label: "파이썬 컴포넌트 — 토큰 0" },
-            { value: "④ 지식층", label: "검색·증강(RAG) → 위키로 재사용" },
-            { value: "⑤ 회수", label: "문서 재파싱 · 패키징하면 앱" },
+            { value: "③ 워커 조립", label: "파이썬 컴포넌트 · 토큰 0" },
+            { value: "④ 지식층", label: "검색·증강(RAG) 재사용" },
+            { value: "⑤ 회수", label: "문서 · 앱으로 패키징" },
         ],
         highlights: [
             {

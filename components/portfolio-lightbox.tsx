@@ -170,18 +170,18 @@ export function PortfolioLightbox({ project, onClose, onPrev, onNext, hasPrev, h
                                 {/* 숫자 배지 — 정리 글을 안 읽어도 이건 눈에 들어온다 */}
                                 {project.stats && project.stats.length > 0 && (
                                     <div
-                                        className="grid gap-2"
+                                        className="grid gap-2.5"
                                         style={{ gridTemplateColumns: `repeat(${Math.min(project.stats.length, 6)}, minmax(0, 1fr))` }}
                                     >
                                         {project.stats.map((s, i) => (
                                             <div
                                                 key={i}
-                                                className="rounded-xl border border-white/5 bg-white/[0.03] px-2 py-3 text-center"
+                                                className="rounded-xl border border-white/10 bg-white/[0.05] px-2.5 py-4 text-center"
                                             >
                                                 <div className="font-mono text-sm font-bold text-sf-blue sm:text-base whitespace-nowrap">
                                                     {s.value}
                                                 </div>
-                                                <div className="mt-1 text-[11.5px] leading-snug text-gray-300">
+                                                <div className="mt-2 text-[13px] font-medium leading-relaxed text-gray-100 break-keep">
                                                     {s.label}
                                                 </div>
                                             </div>
